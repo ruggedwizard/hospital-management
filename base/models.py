@@ -1,14 +1,16 @@
 from django.db import models
 
 # Create your models here.
-class Departments(models.Model):
+class Department(models.Model):
     Department_name = models.CharField(max_length=250, unique=True, blank=True, null=True)
 
     def __str__(self):
         return self.Department_name + "Department"
 
-class Rooms(models.Model):
+class Room(models.Model):
     Room_location = models.CharField(max_length=250, null=True,blank=True)
+    Room_ID = models.CharField(max_length=100, null=True, blank=True, unique=True)
+    Room_availability = models.BooleanField(default=True)
 
     def __str__(self):
         return "Located at :" + self.Room_location 
@@ -23,7 +25,7 @@ class Doctor(models.Model):
     Doctor_firstname = models.CharField(max_length=250, null=True,blank=True)
     Doctor_lastname = models.CharField(max_length=250, null=True,blank=True)
     Doctor_gender = models.CharField(max_length=25, choices=GENDER, default="UNDECIDED")
-    Doctor_department = models.ForeignKey(Departments,on_delete=models.CASCADE, related_name="doctor_department")
+    Doctor_department = models.ForeignKey(Department,on_delete=models.CASCADE, related_name="doctor_department")
     Doctor_specialization = models.CharField(max_length=250, null=True, blank=True)
     Doctor_phone_number = models.CharField(max_length=250, null=True, blank=True)
     Doctor_email_address = models.EmailField(default="firstname.lastname@hospitalmanagement.com", null=True, blank=True)
@@ -39,18 +41,24 @@ class Patient(models.Model):
     Patient_firstname = models.CharField(max_length=250,null=True, blank=True)
     Patient_phone_number = models.CharField(max_length=120, null=True, blank=True)
     Patient_address = models.CharField(max_length=350,null=True,blank=True)
-    Patient_age = models.IntegerField(max_length=1000, null=True,blank=True)
+    Patient_age = models.IntegerField(null=True,blank=True)
     Patient_gender = models.CharField(max_length=25, choices=GENDER,default="UNDECIDED")
-    Patient_room = models.ForeignKey(Rooms, on_delete=models.CharField, null=True, blank=True)
+    Patient_room = models.ForeignKey(Room, on_delete=models.CharField, null=True, blank=True)
 
     def __str__(self):
         return self.Patient_lastname + self.Patient_firstname + "Details"
 
-class Bills(models.Model):
+class Bill(models.Model):
+    PAYMENT_STATUS = (
+        ("PENDING","PENDING"),
+        ("COMPLETED","COMPLETED"),
+    )
+
     patient_name = models.ForeignKey(Patient, on_delete=models.CASCADE, null=True, blank= True)
     amount_paid = models.FloatField(max_length=2000)
+    payment_status = models.CharField(max_length=100, choices=PAYMENT_STATUS, default="PENDING")
     date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.patient_name + self.amount_paid 
+        return self.patient_name.Patient_lastname + "PAYMENT STATUS IS " + self.payment_status
 
