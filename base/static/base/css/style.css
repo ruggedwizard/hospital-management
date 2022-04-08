@@ -1,0 +1,29 @@
+*{
+    background-color: #f8f8f8f8;
+    margin: 0;
+    border: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.login-card{
+    width: 400px;
+    margin-top: 200px;
+
+}
+.login-btn{
+    width: 340px;
+}
+.second-part{
+    background-color: white;
+    width:400px;
+    /* border: 1px solid black; */
+    height: 250px;
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+.input-login{
+    width: 400px;
+   
+    margin: 2em;
+}
