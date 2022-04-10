@@ -1,0 +1,19 @@
+{% load static %}
+{% block content %}
+<div class="row">
+    <div class="col-1">
+        <h5 class="first-text"><img class="medicine-logo" src="{%  static 'base/images/medicine-logo.png' %}" alt="medicine-logo">RE<span class="second-text">MEDIC</span></h5>
+    </div>
+    <div class="col-6">
+        <ul class="navbar">
+            <li class="menu"> <a href="/">Home</a></li>
+            <li class="menu"> <a href="#">About</a></li>
+            <li class="menu"> <a href="#">Departments</a></li>
+            <li class="menu"> <a href="#">Doctors</a></li>
+            <li class="menu"> <a href="#">Blog</a></li>
+            <li class="menu last-menu"> <a href="">Contact</a></li>
+            <li class="btn"> <a href="" class="btn-text">Make an Appointment</a></li>
+        </ul>
+    </div>
+</div>
+{% endblock content %}

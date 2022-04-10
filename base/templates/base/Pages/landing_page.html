@@ -1,0 +1,38 @@
+{% extends 'base/index.html' %}
+{% load static %}
+{% block content %}
+<img src="{% static 'base/images/doctor-carousel.jpeg' %}" alt="background-image" class="image-background">
+    <div class="main-content">
+        <div class="text-holder container">
+            <h2 class="text-value-big">THE MOST VALUEABLE THING IS YOUR HEALTH</h2>
+            <p class="text-value-small">We care about your Health Even the all-powerful Pointing has no control about the blind texts, it is an almost unorthographic life</p>
+        </div>
+    </div>
+
+
+<!-- Make an appointment Section -->
+<div class="appointment-holder container">
+    <div class="form-holder">
+        <h6 style="text-align:center">Make an Appointment</h6>
+        <form action="" method="post">
+            <!-- Fullname -->
+            <label for="full-name"><p>Full Name:</p></label>
+            <input type="text" placeholder="Fullname" name="full-name" id="full-name">
+            <!-- Email Address -->
+            <label for="contact-email"><p>Contact Email (Optional):</p></label>
+            <input type="text" placeholder="email@example.com" name="contact-email" id="contact-email">
+            <!-- Date -->
+            <label for="date-of-appointment"><p>Select a Date:</p></label>
+            <input type="datetime-local" name="date-of-appointment" id="date-of-appointment">
+            <!-- Reason For Appointment -->
+            <label for="reason-for-appointment"><p>Reason for Appointment:</p></label>
+            <textarea name="reason-for-appointment" id="reason-for-appointment" cols="30" rows="50"></textarea>
+            <button class="btn">Make an Appointment</button>
+        </form>
+
+    </div>
+
+</div>
+
+
+{% endblock content %}

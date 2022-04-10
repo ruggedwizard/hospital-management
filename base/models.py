@@ -66,14 +66,14 @@ class Bill(models.Model):
 
 class Appointment(models.Model):
     Fullname = models.CharField(max_length=250)
-    Contact_email = models.EmailField(max_length=500, default="Not Provided", null=True, blank=True)
+    Contact_email = models.EmailField(max_length=500, default="notprovided@example.com", null=True, blank=True)
     Contact_phone = models.CharField(max_length=250)
     Appointment_date = models.DateTimeField()
     Reason_for_Appointment = models.TextField(max_length=2500)
     Appointment_completed = models.BooleanField(default=False, null=True, blank=True)
 
     class Meta:
-        ordering = ["-Appointment_date"]
+        ordering = ["Appointment_date"]
 
     def __str__(self):
         return self.Fullname + " Appointment"
