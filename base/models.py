@@ -63,3 +63,10 @@ class Bill(models.Model):
     def __str__(self):
         return self.patient_name.Patient_lastname + "PAYMENT STATUS IS " + self.payment_status
 
+class Appointment(models.Model):
+    Fullname = models.CharField(max_length=250)
+    Contact_email = models.EmailField(max_length=500, default="Not Provided", null=True, blank=True)
+    Contact_phone = models.CharField(max_length=250)
+    Appointment_date = models.DateTimeField()
+    Reason_for_Appointment = models.TextField(max_length=2500)
+    Appointment_completed = models.BooleanField(default=False)
