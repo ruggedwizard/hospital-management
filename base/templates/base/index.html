@@ -10,20 +10,50 @@
     <title>Hospital Management || Welcome </title>
 <body>
     <div class="row">
-        <div class="col-sm-4 logo">
-            <h5 style="color: aqua;">RE<span style="color: black;">MEDIC</span></h5>
+        <div class="col-1">
+            <h5 class="first-text">RE<span class="second-text">MEDIC</span></h5>
         </div>
-        <div class="col-sm-8">
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Departments</li>
-                <li>Doctors</li>
-                <li>Blog</li>
-                <li>Contact</li>
-                <li class="btn">Book an Appointment</li>
+        <div class="col-6">
+            <ul class="navbar">
+                <li class="menu"> <a href="/">Home</a></li>
+                <li class="menu"> <a href="#">About</a></li>
+                <li class="menu"> <a href="#">Departments</a></li>
+                <li class="menu"> <a href="#">Doctors</a></li>
+                <li class="menu"> <a href="#">Blog</a></li>
+                <li class="menu last-menu"> <a href="">Contact</a></li>
+                <li class="btn"> <a href="" class="btn-text">Make an Appointment</a></li>
             </ul>
         </div>
     </div>
+<!-- Image Holder with Blue over shape -->
+    <div class="main-content">
+        <div class="text-holder container">
+            <h2 class="text-value-big">THE MOST VALUEABLE THING IS YOUR HEALTH</h2>
+            <p class="text-value-small">We care about your Health Even the all-powerful Pointing has no control about the blind texts, it is an almost unorthographic life</p>
+        </div>
+    </div>
+
+<!-- Make an appointment Section -->
+<div class="appointment-holder">
+
+</div>
+
+<!-- Footer Section -->
+<div class="footer">
+    <div class="col-1">
+        <h5 class="first-text">RE<span class="second-text-footer">MEDIC</span></h5>
+    </div>
+    <div class="menu-list">
+        <ul>
+            <li> <a href="/">Home</a></li>
+            <li> <a href="#">About</a></li>
+            <li> <a href="#">Departments</a></li>
+            <li> <a href="#">Doctors</a></li>
+            <li> <a href="#">Blog</a></li>
+            <li> <a href="">Contact</a></li>
+    </div>
+    <!-- <p style="text-align: center; color: white;">&copy; remedic 2022</p> -->
+</div>
 </body>
+<script src="{% static 'base/js/materialize.js' %}"></script>
 </html>
