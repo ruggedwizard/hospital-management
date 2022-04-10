@@ -1,3 +1,4 @@
+from re import T
 from django.db import models
 
 # Create your models here.
@@ -69,4 +70,10 @@ class Appointment(models.Model):
     Contact_phone = models.CharField(max_length=250)
     Appointment_date = models.DateTimeField()
     Reason_for_Appointment = models.TextField(max_length=2500)
-    Appointment_completed = models.BooleanField(default=False)
+    Appointment_completed = models.BooleanField(default=False, null=True, blank=True)
+
+    class Meta:
+        ordering = ["-Appointment_date"]
+
+    def __str__(self):
+        return self.Fullname + " Appointment"
