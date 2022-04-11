@@ -1,5 +1,46 @@
 {% extends 'base/index.html' %}
 {% load static %}
 {% block content %}
-    <h4>Meet Our Physicians👩🏻‍🍳</h4>
+<div>
+    <h5 style="text-align:center">Meet Our Physicians👩🏻‍⚕️</h5>
+    <!-- Doctors Profile Card -->
+    <div class="row card-holder">
+        <!-- Single Doctor Card -->
+    <div class="card doctor-holder col l2 s5">
+        <div class="card-image waves-effect waves-block waves-light">
+            <img class="doctors-logo" src="{% static 'base/images/doctors-icon.png' %}" alt="doctors-image">
+        </div>
+        <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">
+                Dr. Fullname Othername
+                <p><a href="#"></a></p>
+            </span>
+        </div>
+        <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Dr. Fullname Othername</span>
+            <p>Contact:(+234)-812-450-2340</p>
+            <p>Deparrtment: Sugery</p>
+            <p></p>
+        </div>
+    </div>
+    <!-- Another Doctor Card -->
+    <div class="card col l2 s5">
+        <div class="card-image waves-effect waves-block waves-light">
+            <img class="doctors-logo" src="{% static 'base/images/doctors-icon.png' %}" alt="doctors-image">
+        </div>
+        <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">
+                Dr. Fullname Othername
+                <p><a href="#"></a></p>
+            </span>
+        </div>
+        <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Dr. Fullname Othername</span>
+            <p>Contact:(+234)-812-450-2340</p>
+            <p>Deparrtment: Sugery</p>
+            <p>Location: Lagos, Nigeria</p>
+        </div>
+    </div>
+</div>
+</div>
 {% endblock content %}
