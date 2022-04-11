@@ -7,11 +7,11 @@
     <div class="menu-list">
         <ul>
             <li> <a href="/">Home</a></li>
-            <li> <a href="#">About</a></li>
-            <li> <a href="#">Departments</a></li>
-            <li> <a href="#">Doctors</a></li>
-            <li> <a href="#">Blog</a></li>
-            <li> <a href="">Contact</a></li>
+            <li> <a href="{% url 'about_page' %}">About</a></li>
+            <li> <a href="{% url 'department_page' %}">Departments</a></li>
+            <li> <a href="{% url 'doctor_page' %}">Doctors</a></li>
+            <li> <a href="{% url 'blog_page' %}">Blog</a></li>
+            <li> <a href="{% url 'conatct_us_page' %}">Contact</a></li>
     </div>
     <!-- <p style="text-align: center; color: white;">&copy; remedic 2022</p> -->
 </div>
