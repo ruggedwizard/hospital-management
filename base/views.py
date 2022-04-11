@@ -11,3 +11,18 @@ def login_page(request):
 def signup_page(request):
 
     return render(request,'base/Pages/signup_page.html')
+
+def doctor_page(request):
+    return render(request,'base/Pages/doctors_page.html')
+
+def department_page(request):
+    return render(request,'base/Pages/department_page.html')
+
+def about_page(request):
+    return render(request,'base/Pages/about_page.html')
+
+def contact_us_page(request):
+    return render(request,'base/Pages/contact_page.html')
+
+def blog_page(request):
+    return render(request,'base/Pages/blog_page.html')

@@ -7,11 +7,11 @@
     <div class="col-6">
         <ul class="navbar">
             <li class="menu"> <a href="/">Home</a></li>
-            <li class="menu"> <a href="#">About</a></li>
-            <li class="menu"> <a href="#">Departments</a></li>
-            <li class="menu"> <a href="#">Doctors</a></li>
-            <li class="menu"> <a href="#">Blog</a></li>
-            <li class="menu last-menu"> <a href="">Contact</a></li>
+            <li class="menu"> <a href="{% url 'about_page' %}">About</a></li>
+            <li class="menu"> <a href="{% url 'department_page' %}">Departments</a></li>
+            <li class="menu"> <a href="{% url 'doctor_page' %}">Doctors</a></li>
+            <li class="menu"> <a href="{% url 'blog_page' %}">Blog</a></li>
+            <li class="menu last-menu"> <a href="{% url 'conatct_us_page' %}">Contact</a></li>
             <li class="btn"> <a href="" class="btn-text">Make an Appointment</a></li>
         </ul>
     </div>
