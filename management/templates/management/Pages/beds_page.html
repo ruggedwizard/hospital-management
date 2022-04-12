@@ -1,0 +1,42 @@
+{% extends 'management/index.html' %}
+{% load static %}
+{% block content %}
+<div class="wrapper">
+    <div class="title-holder">
+        <h5 class="title">Beds</h5>
+    </div>
+
+    <div class="body-wrapper">
+        <button class="btn add-btn"><i class="small material-icons left">group_add</i> Add Beds</button>
+    </div>
+    <div class="display-list">
+        <table class="striped">
+        <thead>
+          <tr>
+              <th>Name</th>
+              <th>Desciption</th>
+              <th>option</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Alvin</td>
+            <td>Eclair</td>
+            <td>$0.87</td>
+          </tr>
+          <tr>
+            <td>Alan</td>
+            <td>Jellybean</td>
+            <td>$3.76</td>
+          </tr>
+          <tr>
+            <td>Jonathan</td>
+            <td>Lollipop</td>
+            <td>$7.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+{% endblock content %}
