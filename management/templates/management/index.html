@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'management/css/materialize.css' %}">
+    <link rel="stylesheet" href="{% static 'management/css/style.css' %}">
+    <title>Welcome to REMEDIC Management System || Management made easy</title>
+</head>
+<body>
+    {% include 'management/Components/navbar_components.html' %}
+<div class="row">    
+    <div class="col l3">
+    {% include 'management/Components/sider_component.html' %}
+    </div>
+    <div class="col l9 main-content">
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+</div>
+    <!-- Link Javascript files -->
+    <script src="{% static 'management/js/materialize.js' %}"></script>
+</body>
+</html>

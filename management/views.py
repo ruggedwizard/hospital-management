@@ -3,4 +3,4 @@ from django.shortcuts import render
 
 # Create your views here.
 def welcome_page(request):
-    return HttpResponse('<h1>Systems Welcome page</h1>')
+    return render(request,'management/Pages/dashboard_page.html')
