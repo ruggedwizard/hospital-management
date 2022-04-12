@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'base/css/materialize.css' %}">
-    <link rel="stylesheet" href="{% static 'base/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'management/css/materialize.css' %}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'management/css/style_comp.css' %}">
     <title>Hospital Management || Login Page </title>
 </head>
 <body>
@@ -14,20 +15,22 @@
     <div class="row login-card col-sm-7 container">
         <div class="first-part col-sm-6 col-md-6">
             <div class="remedic-logo">
-                <h5 class="first-text"><img class="medicine-logo" src="{%  static 'base/images/medicine-logo.png' %}" alt="medicine-logo">RE<span class="second-text">MEDIC</span></h5>
+                <h5 class="first-text"><img class="medicine-logo" src="{%  static 'management/images/medicine-logo.png' %}" alt="medicine-logo">RE<span class="second-text">MEDIC</span></h5>
             </div>
             <h5 style="text-align: center;">Hospital Management System</h5>
         </div>
         <div class="second-part">
             <form action="" method="post" class="form">
                 <!-- Login Form -->
+                <p><i class="tiny material-icons left">email</i>Email:</p>
                 <input type="text" name="email" class="input-login" placeholder="User Email"/>
+                <p><i class="tiny material-icons left">vpn_key</i>Password:</p>
                 <input type="password" name="password" class="input-login" placeholder="Password"/>
                 <p>forget password?</p>
-                <button type="submit" class="btn login-btn waves-effect waves-light">SIGN IN</button>
+                <button type="submit" class="btn login-btn waves-effect waves-light"><i class="small material-icons left">vpn_key</i>SIGN IN</button>
             </form>
             </div>
     </div>
 </body>
-<script src="{% static 'base/js/materialize.js' %}"></script>
+<script src="{% static 'management/js/materialize.js' %}"></script>
 </html>

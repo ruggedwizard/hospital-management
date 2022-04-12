@@ -1,6 +1,19 @@
 {% block content %}
 <div class="sider-bar">
-    <h4>Sider Component</h4>
+    <ul class="sider-list">
+        <li class="sider-options"><i class="small material-icons left">weekend</i>Dashboards</li>
+        <li class="sider-options"><a href="{% url 'doctors_page' %}"><i class="small material-icons left">domain</i>Departments</a></li>
+        <li class="sider-options"><a href="{% url 'doctors_page' %}"><i class="small material-icons left">healing</i>Doctor</a></li>
+        <li class="sider-options"><i class="small material-icons left">pregnant_woman</i>Patient</li>
+        <li class="sider-options"><i class="small material-icons left">rate_review</i>Human Resources</li>
+        <li class="sider-options"><i class="small material-icons left">store</i>Financial Activities</li>
+        <li class="sider-options"><i class="small material-icons left">receipt</i>Medicine</li>
+        <li class="sider-options"><i class="small material-icons left">people</i>Donor</li>
+        <li class="sider-options"><i class="small material-icons left">hotel</i>Bed</li>
+        <li class="sider-options"><i class="small material-icons left">note_add</i>Reports</li>
+        <li class="sider-options"><i class="small material-icons left">person</i>Profile</li>
+        <li class="sider-options"><i class="small material-icons left">vpn_key</i>Log out</li>
+    </ul>
 </div>
 
 {% endblock content %}

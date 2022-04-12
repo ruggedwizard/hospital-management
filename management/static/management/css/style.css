@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.sider-bar{
+    background-color: rgba(2, 11, 28, 0.919);
+    color: white;
+    height: 642px;
+    padding: 2em;
+    margin-bottom: -2em;
+}
+
+.sider-options{
+    margin-bottom: 2em;
+}
+
+.main-content{
+    border: 10px solid gainsboro;
+}
+.title-holder{
+    background-color: lightseagreen;
+    height: 50px;
+    color: white;
+    margin-left: -10px;
+    margin-right: -11px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-left: 1em;
+}
+.add-btn{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color: gainsboro;
+    color: lightseagreen;
+
+}
+.add-btn:hover{
+    color: lightseagreen;
+    background-color: gainsboro;
+}
