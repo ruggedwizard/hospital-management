@@ -7,3 +7,6 @@ def welcome_page(request):
 
 def doctors_page(request):
     return render(request,'management/Pages/doctors_page.html')
+
+def patient_page(request):
+    return render(request,'management/Pages/patient_page.html')
