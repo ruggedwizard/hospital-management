@@ -5,6 +5,9 @@ from django.shortcuts import render
 def welcome_page(request):
     return render(request,'management/Pages/login_page.html')
 
+def departments_page(request):
+    return render(request,'management/Pages/departments_page.html')
+
 def doctors_page(request):
     return render(request,'management/Pages/doctors_page.html')
 
