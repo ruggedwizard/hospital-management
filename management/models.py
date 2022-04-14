@@ -6,7 +6,7 @@ class Department(models.Model):
     Department_details = models.TextField(max_length=1000, null=True, blank=True)
 
     def __str__(self):
-        return self.Department_name + "Department"
+        return self.Department_name + " Department"
 
 class Room(models.Model):
     Room_location = models.CharField(max_length=250, null=True,blank=True)

@@ -12,29 +12,21 @@
     <div class="display-list">
         <table class="striped">
         <thead>
-          <tr>
-              <th>Name</th>
-              <th>Desciption</th>
-              <th>option</th>
+          <tr class="row">
+              <th class="col l5">Name</th>
+              <th class="col l5">Desciption</th>
+              <th class="col l2">option</th>
           </tr>
         </thead>
 
         <tbody>
-          <tr>
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
+          {% for deparment in departments %}
+          <tr class="row">
+            <td class="col l5">{{deparment.Department_name}}</td>
+            <td class="col l5">{{deparment.Department_details}}</td>
+            <td class="col l2">view more</td>
           </tr>
-          <tr>
-            <td>Alan</td>
-            <td>Jellybean</td>
-            <td>$3.76</td>
-          </tr>
-          <tr>
-            <td>Jonathan</td>
-            <td>Lollipop</td>
-            <td>$7.00</td>
-          </tr>
+          {% endfor %}
         </tbody>
       </table>
     </div>
