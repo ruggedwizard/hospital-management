@@ -14,27 +14,25 @@
         <thead>
           <tr>
               <th>Name</th>
-              <th>Desciption</th>
-              <th>option</th>
+              <th>Email</th>
+              <th>Location</th>
+              <th>Phone</th>
+              <th>Department</th>
+              <th>Option</th>
           </tr>
         </thead>
 
         <tbody>
+          {% for doctor in doctors %}
           <tr>
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
+            <td>Dr.{{doctor.Doctor_lastname}}</td>
+            <td>{{doctor.Doctor_email_address}}</td>
+            <td>{{doctor.Doctor_location}}</td>
+            <td>{{doctor.Doctor_phone_number}}</td>
+            <td>{{doctor.Doctor_department}}</td>
+            <td>Options</td>
           </tr>
-          <tr>
-            <td>Alan</td>
-            <td>Jellybean</td>
-            <td>$3.76</td>
-          </tr>
-          <tr>
-            <td>Jonathan</td>
-            <td>Lollipop</td>
-            <td>$7.00</td>
-          </tr>
+          {% endfor %}
         </tbody>
       </table>
     </div>

@@ -33,7 +33,7 @@ class Doctor(models.Model):
     Doctor_location = models.CharField(max_length=250,null=True, blank=True)
 
     def __str__(self):
-        return self.Doctor_firstname + self.Doctor_lastname + " Account Details"
+        return self.Doctor_firstname+ " " + self.Doctor_lastname + " Account Details"
     
 
 

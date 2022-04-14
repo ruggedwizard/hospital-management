@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from management.models import Department
+from management.models import Department, Doctor
 # Create your views here.
 def welcome_page(request):
     return render(request,'management/Pages/login_page.html')
@@ -12,7 +12,11 @@ def departments_page(request):
     return render(request,'management/Pages/departments_page.html',context)
 
 def doctors_page(request):
-    return render(request,'management/Pages/doctors_page.html')
+    doctors = Doctor.objects.all()
+    context = {
+        'doctors':doctors
+    }
+    return render(request,'management/Pages/doctors_page.html',context)
 
 def patient_page(request):
     return render(request,'management/Pages/patient_page.html')
