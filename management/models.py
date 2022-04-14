@@ -33,21 +33,26 @@ class Doctor(models.Model):
     Doctor_location = models.CharField(max_length=250,null=True, blank=True)
 
     def __str__(self):
-        return self.Doctor_firstname+ " " + self.Doctor_lastname + " Account Details"
+        return "Dr. "+ self.Doctor_firstname+ " " + self.Doctor_lastname
     
 
 
 class Patient(models.Model):
+    Patient_id = models.CharField(unique=True, max_length=200, default="Please Update",null=True,blank=True)
     Patient_lastname = models.CharField(max_length=250,null=True, blank=True)
     Patient_firstname = models.CharField(max_length=250,null=True, blank=True)
+    Patient_email_address = models.EmailField(max_length=250, null=True, blank=True, default="Null_provided@email.com")
     Patient_phone_number = models.CharField(max_length=120, null=True, blank=True)
     Patient_address = models.CharField(max_length=350,null=True,blank=True)
+    Patient_doctor = models.ForeignKey(Doctor,on_delete=models.CASCADE, related_name="patient_doctor")
+    Patient_blood_group = models.CharField(max_length=200, default="Please Update")
+    Patient_blood_genotype = models.CharField(max_length=200, default="Please Update")
     Patient_age = models.IntegerField(null=True,blank=True)
     Patient_gender = models.CharField(max_length=25, choices=GENDER,default="UNDECIDED")
     Patient_room = models.ForeignKey(Room, on_delete=models.CharField, null=True, blank=True)
 
     def __str__(self):
-        return self.Patient_lastname + self.Patient_firstname + "Details"
+        return self.Patient_lastname +" " + self.Patient_firstname + " Details"
 
 class Bill(models.Model):
     PAYMENT_STATUS = (
