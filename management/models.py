@@ -81,3 +81,13 @@ class Appointment(models.Model):
 
     def __str__(self):
         return self.Fullname + " Appointment"
+    
+
+class Alloted_Beds(models.Model):
+    Bed_id = models.ForeignKey(Room,on_delete=models.CASCADE,null=True, blank=True) 
+    Alloted_patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
+    Alloted_time = models.DateTimeField(auto_now_add=True,null=True, blank=True)
+    # Discharge_time = models.DateField(null=False, blank=True)
+
+    def __str__(self):
+        return self.Bed_id.Room_ID + " is Alloted to " + self.Alloted_patient.Patient_lastname + " " + self.Alloted_patient.Patient_firstname

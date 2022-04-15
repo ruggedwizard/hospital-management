@@ -3,38 +3,35 @@
 {% block content %}
 <div class="wrapper">
     <div class="title-holder">
-        <h5 class="title">Beds</h5>
+        <h5 class="title">Alloted Beds</h5>
     </div>
 
     <div class="body-wrapper">
-        <button class="btn add-btn"><i class="small material-icons left">group_add</i> Add Beds</button>
+        <button class="btn add-btn"><i class="small material-icons left">group_add</i> Allot Beds</button>
     </div>
     <div class="display-list">
         <table class="striped">
         <thead>
           <tr>
-              <th>Name</th>
-              <th>Desciption</th>
-              <th>option</th>
+              <th>Bed Id</th>
+              <th>Patient</th>
+              <th>Alloted Time</th>
+              <th>Discharge Time</th>
+              <th>Options</th>
+
           </tr>
         </thead>
 
         <tbody>
+          {% for alloted_bed in alloted_beds %}
           <tr>
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
+            <td>{{alloted_bed.Bed_id.Room_ID}}</td>
+            <td>{{alloted_bed.Alloted_patient.Patient_lastname}} {{alloted_bed.Alloted_patient.Patient_firstname}}</td>
+            <td>{{alloted_bed.Alloted_time}}</td>
+            <td>{{alloted_bed.Alloted_time}}</td>
+            <td>options</td>
           </tr>
-          <tr>
-            <td>Alan</td>
-            <td>Jellybean</td>
-            <td>$3.76</td>
-          </tr>
-          <tr>
-            <td>Jonathan</td>
-            <td>Lollipop</td>
-            <td>$7.00</td>
-          </tr>
+          {% endfor %}
         </tbody>
       </table>
     </div>
