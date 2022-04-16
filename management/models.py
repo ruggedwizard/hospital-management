@@ -172,4 +172,4 @@ class Birth_report(models.Model):
     date_and_time = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.patient.Patient_lastname + self.patient.Patient_firstname + " Delivery Status"
+        return self.patient.Patient_lastname + self.patient.Patient_firstname + " Birth Report"
