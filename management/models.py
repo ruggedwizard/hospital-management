@@ -154,3 +154,22 @@ class Donors(models.Model):
         patient_age = self.date_of_birth - self.date_donated
         return patient_age
 
+class Operation(models.Model):
+    patient = models.ForeignKey(Patient,on_delete=models.CASCADE,max_length=250)
+    description = models.TextField(max_length=2048, null=True, blank=True)
+    doctor = models.ForeignKey(Doctor,on_delete=models.CASCADE, null=True, blank=True)
+    date = models.DateTimeField()
+    emergency = models.BooleanField(default=False)
+    
+    def __str__(self):
+        return self.patient.Patient_lastname + self.patient.Patient_firstname + " Operation Details"
+
+class Birth_report(models.Model):
+    patient = models.ForeignKey(Patient,on_delete=models.CASCADE,null=True, blank=True)
+    description = models.TextField(max_length=2048, null=True,blank=True)
+    doctor = models.ForeignKey(Doctor,on_delete=models.CASCADE,blank=True, null=True)
+    mode_of_delivery = models.CharField(max_length=250,null=True, blank=True)
+    date_and_time = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.patient.Patient_lastname + self.patient.Patient_firstname + " Delivery Status"
