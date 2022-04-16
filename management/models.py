@@ -1,3 +1,4 @@
+from pyexpat import model
 from django.db import models
 
 # Create your models here.
@@ -73,6 +74,7 @@ class Appointment(models.Model):
     Contact_email = models.EmailField(max_length=500, default="notprovided@example.com", null=True, blank=True)
     Contact_phone = models.CharField(max_length=250)
     Appointment_date = models.DateTimeField()
+    Assigned_doctor = models.ForeignKey(Doctor,on_delete=models.CASCADE, null=True,blank=True)
     Reason_for_Appointment = models.TextField(max_length=2500)
     Appointment_completed = models.BooleanField(default=False, null=True, blank=True)
 
@@ -91,3 +93,47 @@ class Alloted_Beds(models.Model):
 
     def __str__(self):
         return self.Bed_id.Room_ID + " is Alloted to " + self.Alloted_patient.Patient_lastname + " " + self.Alloted_patient.Patient_firstname
+
+class Nurse(models.Model):
+    Nurse_lastname = models.CharField(max_length=250)
+    Nurse_firstname = models.CharField(max_length=250)
+    Nurse_email_address = models.EmailField(max_length=250, null=True, blank=True,default="email@hospitalmanagent.com")
+    Nurse_phone_number = models.CharField(max_length=250)
+    Nurse_location = models.CharField(max_length=250)
+
+    def __str__(self):
+        return ("Nurse %d",self.id)
+
+class Other_Staff(models.Model):
+
+    DESIGNATION = (
+        ('UNDECIDED','UNDECIDED'),
+        ('CLEANER','CLEANER'),
+        ('CLERK','CLERK'),
+        ('COOK','COOK'),
+        ('MATRON','MATRON'),
+        ('MIDWIFE','MIDWIFE'),
+        ('DOCTOR IN TRAINING','DOCTOR IN TRAINING'),
+        ('LAB TECHNICIAN','LAB TECHNICIAN'),
+        ('LAB ASSISTANT', 'LAB ASSISTANT'),
+
+    )
+
+    Other_lastname = models.CharField(max_length=250)
+    Other_firstname = models.CharField(max_length=250)
+    Other_email= models.EmailField(max_length=250, null=True, blank=True, default="otherstaff@hospitalmanagement.com")
+    Other_phone = models.CharField(max_length=250)
+    Other_address = models.CharField(max_length=250)
+    Other_role = models.CharField(max_length=100,choices=DESIGNATION, default="UNDECIDED",null=True, blank=True)
+
+
+class Medicine(models.Model):
+    name = models.CharField(max_length=250)
+    quantity_available = models.IntegerField()
+    nafdac_no = models.CharField(max_length=200)
+    last_updated = models.DateTimeField(auto_now_add=True)
+    entered_by = models.ForeignKey(Other_Staff,on_delete=models.CASCADE,null=True, blank=True)
+    amount = models.IntegerField()
+
+    def __str__(self):
+        return self.name + " Drug Details"
