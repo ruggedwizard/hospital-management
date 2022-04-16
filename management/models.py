@@ -137,3 +137,20 @@ class Medicine(models.Model):
 
     def __str__(self):
         return self.name + " Drug Details"
+
+class Donors(models.Model):
+    name = models.CharField(max_length=250)
+    patient = models.ForeignKey(Patient, on_delete=models.CASCADE, null=True, blank=True)
+    date_of_birth = models.DateField(null=True, blank=True)
+    blood_group = models.CharField(max_length=250)
+    bloood_genotype = models.CharField(max_length=250)
+    date_donated = models.DateTimeField(auto_now_add=True,blank=True, null=True)
+    amount_donated = models.CharField(null=True, max_length=250,blank=True)
+
+    def __str__(self):
+        return self.name + "Blood"
+
+    def calculate_age(self):
+        patient_age = self.date_of_birth - self.date_donated
+        return patient_age
+
