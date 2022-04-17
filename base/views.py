@@ -1,5 +1,6 @@
+from multiprocessing import context
 from django.shortcuts import render
-
+from management.models import Doctor
 # Create your views here.
 def landing_page(request):
     return render(request,'base/Pages/landing_page.html')
@@ -13,7 +14,11 @@ def signup_page(request):
     return render(request,'base/Pages/signup_page.html')
 
 def doctor_page(request):
-    return render(request,'base/Pages/doctors_page.html')
+    doctors = Doctor.objects.all()
+    context = {
+        'doctors':doctors
+    }
+    return render(request,'base/Pages/doctors_page.html',context)
 
 def department_page(request):
     return render(request,'base/Pages/department_page.html')

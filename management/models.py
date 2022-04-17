@@ -102,7 +102,7 @@ class Nurse(models.Model):
     Nurse_location = models.CharField(max_length=250)
 
     def __str__(self):
-        return ("Nurse %d",self.id)
+        return "Nurse " + self.Nurse_lastname + " " + self.Nurse_firstname
 
 class Other_Staff(models.Model):
 
@@ -125,6 +125,9 @@ class Other_Staff(models.Model):
     Other_phone = models.CharField(max_length=250)
     Other_address = models.CharField(max_length=250)
     Other_role = models.CharField(max_length=100,choices=DESIGNATION, default="UNDECIDED",null=True, blank=True)
+
+    def __str__(self):
+        return self.Other_firstname + " " + self.Other_lastname + " " +self.Other_role
 
 
 class Medicine(models.Model):
