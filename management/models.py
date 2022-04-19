@@ -177,3 +177,4 @@ class Birth_report(models.Model):
 
     def __str__(self):
         return self.patient.Patient_lastname + self.patient.Patient_firstname + " Birth Report"
+

@@ -20,10 +20,11 @@
             <h5 style="text-align: center;">Hospital Management System</h5>
         </div>
         <div class="second-part">
-            <form action="" method="post" class="form">
+            <form action="" method="POST" class="form">
+                {% csrf_token %}
                 <!-- Login Form -->
                 <p><i class="tiny material-icons left">email</i>Email:</p>
-                <input type="text" name="email" class="input-login" placeholder="User Email"/>
+                <input type="text" name="username" class="input-login" placeholder="User Email"/>
                 <p><i class="tiny material-icons left">vpn_key</i>Password:</p>
                 <input type="password" name="password" class="input-login" placeholder="Password"/>
                 <p>forget password?</p>
