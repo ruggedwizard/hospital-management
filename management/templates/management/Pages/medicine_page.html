@@ -14,27 +14,25 @@
         <thead>
           <tr>
               <th>Name</th>
-              <th>Desciption</th>
-              <th>option</th>
+              <th>Amount</th>
+              <th>Entered By</th>
+              <th>Avialability</th>
+              <th>Options</th>
+
           </tr>
         </thead>
 
         <tbody>
+          {% for medicine in medicines  %}
           <tr>
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
+            <td>{{medicine.name}}</td>
+            <td>{{medicine.amount}}</td>
+            <td>{{medicine.entered_by}}</td>
+            <td>{{medicine.quantity_available}}</td>
+            <td>Options </td>
+
           </tr>
-          <tr>
-            <td>Alan</td>
-            <td>Jellybean</td>
-            <td>$3.76</td>
-          </tr>
-          <tr>
-            <td>Jonathan</td>
-            <td>Lollipop</td>
-            <td>$7.00</td>
-          </tr>
+          {% endfor %}
         </tbody>
       </table>
     </div>
