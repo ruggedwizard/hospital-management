@@ -14,27 +14,24 @@
         <thead>
           <tr>
               <th>Name</th>
-              <th>Desciption</th>
-              <th>option</th>
+              <th>Patient</th>
+              <th>Blood Group</th>
+              <th>Blood Genotype</th>
+              <th>Options</th>
+              
           </tr>
         </thead>
 
         <tbody>
+          {% for donor in donors %}
           <tr>
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
+            <td>{{donor.name}}</td>
+            <td>{{donor.patient}}</td>
+            <td>{{donor.blood_group}}</td>
+            <td>{{donor.bloood_genotype}}</td>
+            <td>Options</td>
           </tr>
-          <tr>
-            <td>Alan</td>
-            <td>Jellybean</td>
-            <td>$3.76</td>
-          </tr>
-          <tr>
-            <td>Jonathan</td>
-            <td>Lollipop</td>
-            <td>$7.00</td>
-          </tr>
+          {% endfor %}
         </tbody>
       </table>
     </div>

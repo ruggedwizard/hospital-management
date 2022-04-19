@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from management.models import Alloted_Beds, Department, Doctor, Patient
+from management.models import Alloted_Beds, Department, Doctor, Donors, Patient
 # Create your views here.
 def welcome_page(request):
     return render(request,'management/Pages/login_page.html')
@@ -32,8 +32,11 @@ def medicines(request):
     return render(request,'management/Pages/medicine_page.html')
 
 def donors_page(request):
-    
-    return render(request,'management/Pages/donor_page.html')
+    donors = Donors.objects.all()
+    context = {
+        'donors':donors
+    }
+    return render(request,'management/Pages/donor_page.html',context)
 
 def beds_page(request):
     alloted_beds = Alloted_Beds.objects.all()

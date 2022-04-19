@@ -147,11 +147,12 @@ class Donors(models.Model):
     date_of_birth = models.DateField(null=True, blank=True)
     blood_group = models.CharField(max_length=250)
     bloood_genotype = models.CharField(max_length=250)
+    donor_contact = models.CharField(max_length=250,default="Please Update")
     date_donated = models.DateTimeField(auto_now_add=True,blank=True, null=True)
     amount_donated = models.CharField(null=True, max_length=250,blank=True)
 
     def __str__(self):
-        return self.name + "Blood"
+        return self.name + " Blood"
 
     def calculate_age(self):
         patient_age = self.date_of_birth - self.date_donated
