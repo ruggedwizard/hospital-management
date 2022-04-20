@@ -3,11 +3,25 @@
 {% block content %}
 <div class="wrapper">
     <div class="title-holder">
-        <h5 class="title">{{profile_details}}</h5>
-        <p>{{profile_details.Doctor_firstname}}</p>
+        <h5 class="title">Profile Page</h5>
     </div>
     <div class="profile-details">
-        
+        <div class="image-holder">
+            
+        </div>
+        <div class="profile-text">
+            <h4>{{profile_details}}</h4>
+            <h6>{{profile_details.Doctor_email_address}}</h6>
+            <hr>
+            <div class="row">
+                <div class="col l6">
+                    <h3>Split 1</h3>
+                </div>
+                <div class="col l6">
+                    <h3>Split 2</h3>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock content %}
