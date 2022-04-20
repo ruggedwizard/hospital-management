@@ -1,6 +1,5 @@
-from pyexpat import model
 from django.db import models
-
+from django.contrib.auth import get_user_model
 # Create your models here.
 class Department(models.Model):
     Department_name = models.CharField(max_length=250, unique=True, blank=True, null=True)
@@ -24,6 +23,7 @@ GENDER = (
     )
 
 class Doctor(models.Model):
+    Doctor_user_instance = models.ForeignKey(get_user_model(),on_delete=models.CASCADE,null=True, blank=True)
     Doctor_firstname = models.CharField(max_length=250, null=True,blank=True)
     Doctor_lastname = models.CharField(max_length=250, null=True,blank=True)
     Doctor_gender = models.CharField(max_length=25, choices=GENDER, default="UNDECIDED")
