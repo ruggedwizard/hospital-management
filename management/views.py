@@ -71,7 +71,23 @@ def reports_page(request):
 
 @login_required(login_url=welcome_page)
 def profile_page(request):
-    return render(request,'management/Pages/profile_page.html')
+    profile_details = Doctor.objects.get(Doctor_user_instance=request.user)
+
+    single_data = {
+        'firstame':profile_details.Doctor_firstname,
+        'lastname':profile_details.Doctor_lastname,
+        'Department':profile_details.Doctor_department.Department_name,
+        'Specialization':profile_details.Doctor_specialization,
+        'Phone Number':profile_details.Doctor_phone_number,
+        'Email Address':profile_details.Doctor_email_address,
+    }
+
+    print(single_data)
+    context = {
+
+        'profile_details':profile_details
+    }
+    return render(request,'management/Pages/profile_page.html', context)
 
 def logout_user(request):
     logout(request)
