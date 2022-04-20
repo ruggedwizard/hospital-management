@@ -11,6 +11,7 @@ urlpatterns = [
     path('beds/',views.beds_page, name="beds_page"),
     path('reports/',views.reports_page, name="reports_page"),
     path('profile_page/',views.profile_page, name="profile_page"),
+    path('logout_user/',views.logout_user, name="logout"),
 
 
 ]
