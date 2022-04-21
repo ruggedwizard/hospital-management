@@ -72,6 +72,8 @@ def reports_page(request):
 @login_required(login_url=welcome_page)
 def profile_page(request):
     profile_details = Doctor.objects.get(Doctor_user_instance=request.user)
+    doctors_patient = Patient.objects.filter(Patient_doctor=profile_details)
+    print(doctors_patient)
 
     single_data = {
         'firstame':profile_details.Doctor_firstname,
@@ -82,9 +84,12 @@ def profile_page(request):
         'Email Address':profile_details.Doctor_email_address,
     }
 
+    for single_patient in doctors_patient:
+        print(single_patient.Patient_lastname + " " + single_patient.Patient_firstname)
+
     print(single_data)
     context = {
-
+        'doctors_patient':doctors_patient,
         'profile_details':profile_details
     }
     return render(request,'management/Pages/profile_page.html', context)

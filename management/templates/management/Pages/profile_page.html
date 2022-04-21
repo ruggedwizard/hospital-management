@@ -15,10 +15,18 @@
             <hr>
             <div class="row">
                 <div class="col l6">
-                    <h3>Split 1</h3>
+                    <label for="firstname">Firstname:</label>
+                    <input type="text" name="firstname" id="firstname" value="{{profile_details.Doctor_firstname}}" disabled>
+                    <label for="firstname">Lastname:</label>
+                    <input type="text" name="lastname" id="lastname" value="{{profile_details.Doctor_lastname}}" disabled>
+                    <label for="department">Department:</label>
+                    <input type="text" name="department" id="department" value="{{profile_details.Doctor_department}}" disabled>
                 </div>
                 <div class="col l6">
-                    <h3>Split 2</h3>
+                    <b>Dcotors Patients</b>
+                    {% for patients in doctors_patient %}
+                    <h6>{{patients}}</h6>
+                    {% endfor %}
                 </div>
             </div>
         </div>
