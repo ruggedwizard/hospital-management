@@ -23,9 +23,9 @@
                     <input type="text" name="department" id="department" value="{{profile_details.Doctor_department}}" disabled>
                 </div>
                 <div class="col l6">
-                    <b>Dcotors Patients</b>
+                    <b>Doctors Patients</b>
                     {% for patients in doctors_patient %}
-                    <h6>{{patients}}</h6>
+                    <h6>{{patients}} <a href="{% url 'detailed_patient_page' patients.id %}">View Profile</a></h6>
                     {% endfor %}
                 </div>
             </div>

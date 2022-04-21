@@ -69,30 +69,27 @@ def beds_page(request):
 def reports_page(request):
     return render(request,'management/Pages/reports_page.html')
 
+# This view is responsible to get the current logged user profile data
 @login_required(login_url=welcome_page)
 def profile_page(request):
     profile_details = Doctor.objects.get(Doctor_user_instance=request.user)
     doctors_patient = Patient.objects.filter(Patient_doctor=profile_details)
     print(doctors_patient)
-
-    single_data = {
-        'firstame':profile_details.Doctor_firstname,
-        'lastname':profile_details.Doctor_lastname,
-        'Department':profile_details.Doctor_department.Department_name,
-        'Specialization':profile_details.Doctor_specialization,
-        'Phone Number':profile_details.Doctor_phone_number,
-        'Email Address':profile_details.Doctor_email_address,
-    }
-
-    for single_patient in doctors_patient:
-        print(single_patient.Patient_lastname + " " + single_patient.Patient_firstname)
-
-    print(single_data)
     context = {
         'doctors_patient':doctors_patient,
         'profile_details':profile_details
     }
     return render(request,'management/Pages/profile_page.html', context)
+
+# This view is responsible to get the Doctors patients details
+def patient_details_page(request,pk):
+    patient_data = Patient.objects.get(id=pk)
+    checked_in = Alloted_Beds.objects.get(Alloted_patient=patient_data)
+    print(checked_in.Alloted_time)
+    context = {
+        'patient_data':patient_data
+    }
+    return render(request,'management/Pages/patients_details.html',context)
 
 def logout_user(request):
     logout(request)

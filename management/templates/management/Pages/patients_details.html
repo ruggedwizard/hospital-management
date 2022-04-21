@@ -1,0 +1,27 @@
+{% extends 'management/index.html' %}
+{% load static %}
+{% block content %}
+<div class="wrapper">
+    <div class="title-holder">
+        <h5 class="title">{{patient_data}}</h5>
+    </div>
+    <div class="profile-details">
+        <div class="image-holder">
+            
+        </div>
+        <div class="profile-text">
+            <h6>Fullname: {{patient_data.Patient_lastname}} {{patient_data.Patient_firstname}}</h6>
+            <h6>Age: {{patient_data.Patient_age}}</h6>
+            <h6>Email: {{patient_data.Patient_email_address}}</h6>
+            <h6>Gender: {{patient_data.Patient_gender}}</h6>
+            <h6>Blood Group: {{patient_data.Patient_blood_group}}</h6>
+            <h6>Patient is {{patient_data.Patient_room}}</h6>
+            <h6>Patient Room: {{patient_data.Patient_room.Room_location}}</h6>
+            <h6>Patient Room Number: {{patient_data.Patient_room.Room_ID}}</h6>
+            
+
+            <button class="btn "> Print Details </button>
+        </div>
+    </div>
+</div>
+{% endblock content %}

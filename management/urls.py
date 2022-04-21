@@ -5,6 +5,7 @@ urlpatterns = [
     path('doctors/',views.doctors_page, name="doctors_page"),
     path('departments/',views.departments_page, name="departments_page"),
     path('patients/',views.patient_page, name="patients_page"),
+    path('patients/<str:pk>',views.patient_details_page,name="detailed_patient_page"),
     path('financies/',views.financial_activities, name="financies_page"),
     path('medicines/',views.medicines, name="medicine_page"),
     path('donors/',views.donors_page, name="donors_page"),
@@ -12,6 +13,5 @@ urlpatterns = [
     path('reports/',views.reports_page, name="reports_page"),
     path('profile_page/',views.profile_page, name="profile_page"),
     path('logout_user/',views.logout_user, name="logout"),
-
 
 ]
