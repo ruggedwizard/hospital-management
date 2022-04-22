@@ -9,11 +9,12 @@ i found out a lot while carrying out a research and i am trying to breach this g
 
 <!-- The User Website  -->
 # The User Website Here the user can view about the hospital make appointment as seen on the navbar
-![Screenshot (80)](https://user-images.githubusercontent.com/40686166/164808184-26a74380-23a2-40b2-a0c6-0802f8bc5a3a.png)
+![Screenshot (80)](https://user-images.githubusercontent.com/40686166/164814321-32c6ff29-2d8b-4e96-b424-c5792e9cfdeb.png)
 
 <!-- The Landing Page -->
 # The Management App Login Page
-![Screenshot (81)](https://user-images.githubusercontent.com/40686166/164806592-33cf89c8-3729-46d5-97d8-ffafce7b6cd1.png)
+![Screenshot (81)](https://user-images.githubusercontent.com/40686166/164814252-21926d4d-ba79-492b-a05a-a974c82f137b.png)
+
 
 # Languange and Tools Used 
 1. Python Django 
