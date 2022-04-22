@@ -2,7 +2,8 @@ from django.shortcuts import redirect, render
 from management.models import Alloted_Beds, Department, Doctor, Donors, Medicine, Patient
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
-# Create your views here.
+
+#This view is responsible for loging the user into the management system 
 def welcome_page(request):
     if request.method == 'POST':
        username = request.POST['username']
@@ -87,10 +88,12 @@ def patient_details_page(request,pk):
     checked_in = Alloted_Beds.objects.get(Alloted_patient=patient_data)
     print(checked_in.Alloted_time)
     context = {
-        'patient_data':patient_data
+        'patient_data':patient_data,
+        'checked_id':checked_in,
     }
     return render(request,'management/Pages/patients_details.html',context)
 
+# This viiew is responsible for the logout functionality
 def logout_user(request):
     logout(request)
     return redirect('login_page')
