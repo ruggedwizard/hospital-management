@@ -3,7 +3,7 @@
 {% block content %}
 <div class="wrapper">
     <div class="title-holder">
-        <h5 class="title">Reports</h5>
+        <h5 class="title">Birth Reports</h5>
     </div>
 
     <div class="body-wrapper">
@@ -15,26 +15,21 @@
           <tr>
               <th>Name</th>
               <th>Desciption</th>
-              <th>option</th>
+              <th>Doctor</th>
+              <th>Delivery Date</th>
           </tr>
         </thead>
 
         <tbody>
+          {% for birth_report  in birth_reports %}
           <tr>
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
+            <td>{{birth_report.patient.Patient_lastname}} {{birth_report.patient.Patient_firstname}}</td>
+            <td>{{birth_report.description}}</td>
+            <td>Dr. {{birth_report.doctor.Doctor_lastname}} {{birth_report.doctor.Doctor_firstname}}</td>
+            <td>{{birth_report.date_and_time}}</td>
           </tr>
-          <tr>
-            <td>Alan</td>
-            <td>Jellybean</td>
-            <td>$3.76</td>
-          </tr>
-          <tr>
-            <td>Jonathan</td>
-            <td>Lollipop</td>
-            <td>$7.00</td>
-          </tr>
+          {% endfor %}
+          
         </tbody>
       </table>
     </div>

@@ -1,7 +1,6 @@
 from multiprocessing import context
-from traceback import print_tb
 from django.shortcuts import redirect, render
-from management.models import Alloted_Beds, Department, Doctor, Donors, Medicine, Nurse, Patient
+from management.models import Alloted_Beds, Birth_report, Department, Doctor, Donors, Medicine, Nurse, Patient
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
 from management.forms import NewUserForm,CreateDoctorPofile, CreateNurseProfile
@@ -40,13 +39,7 @@ def update_user_profile(request,pk):
     user = User.objects.get(id=pk)
     Doctor.objects.get_or_create(Doctor_user_instance=user)
     this = Doctor.objects.get(Doctor_user_instance=user)
-
-   
-
     profile_form = CreateDoctorPofile(instance=this)
-
-
-
     if request.method == 'POST':
         profile_form = CreateDoctorPofile(request.POST,instance=this)
         if profile_form.is_valid():
@@ -60,7 +53,8 @@ def update_user_profile(request,pk):
         }
 
     return render(request,'management/Pages/test_page.html',context)
-
+# To update Nurse profile page
+@login_required(login_url=welcome_page)
 def update_nurse_profile(request,pk):
     user = User.objects.get(id=pk)
     Nurse.objects.get_or_create(Nurse_user_instance=user)
@@ -80,14 +74,15 @@ def update_nurse_profile(request,pk):
     return render(request,'management/Pages/update_nurse_profile.html', context)
 
 # This view is responsibe for nurse profile
+@login_required(login_url=welcome_page)
 def nurse_profile(request):
     profile_details = Nurse.objects.get(Nurse_user_instance=request.user)
-
     context ={
         'profile_details':profile_details
     }
     return render(request,'management/Pages/nurse_profile_page.html',context)
 
+# THis will display a list of all Departments
 @login_required(login_url=welcome_page)
 def departments_page(request):
     departments = Department.objects.all()
@@ -95,7 +90,7 @@ def departments_page(request):
         'departments':departments
     }
     return render(request,'management/Pages/departments_page.html',context)
-
+# This will return a list of all the doctors 
 @login_required(login_url=welcome_page)
 def doctors_page(request):
     doctors = Doctor.objects.all()
@@ -104,6 +99,7 @@ def doctors_page(request):
     }
     return render(request,'management/Pages/doctors_page.html',context)
 
+# This will list all the patient from the database
 @login_required(login_url=welcome_page)
 def patient_page(request):
     patients = Patient.objects.all()
@@ -116,6 +112,7 @@ def patient_page(request):
 def financial_activities(request):
     return render(request,'management/Pages/financial_activities_page.html')
 
+# This will return a list of all medicine the pharmacy has
 @login_required(login_url=welcome_page)
 def medicines(request):
     medicines = Medicine.objects.all()
@@ -142,7 +139,11 @@ def beds_page(request):
 
 @login_required(login_url=welcome_page)
 def reports_page(request):
-    return render(request,'management/Pages/reports_page.html')
+    birth_reports =Birth_report.objects.all()
+    context = {
+        'birth_reports':birth_reports
+    }
+    return render(request,'management/Pages/reports_page.html',context)
 
 # This view is responsible to get the current logged user Doctors profile data
 @login_required(login_url=welcome_page)
