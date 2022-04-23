@@ -1,3 +1,4 @@
+from email.policy import default
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import User
@@ -26,7 +27,7 @@ GENDER = (
 
 class Doctor(models.Model):
     Doctor_user_instance = models.OneToOneField(User,on_delete=models.CASCADE,null=True, blank=True)
-    # Profile_image = models.ImageField(upload_to="image")
+    Profile_image = models.ImageField(blank=True, null=True,default="Null")
     Doctor_firstname = models.CharField(max_length=250, null=True,blank=True)
     Doctor_lastname = models.CharField(max_length=250, null=True,blank=True)
     Doctor_gender = models.CharField(max_length=25, choices=GENDER, default="UNDECIDED")

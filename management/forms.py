@@ -13,6 +13,6 @@ class NewUserForm(UserCreationForm):
 class CreateDoctorPofile(forms.ModelForm):
     class Meta:
         model = Doctor
-        fields = ['Doctor_firstname','Doctor_lastname','Doctor_gender','Doctor_department','Doctor_specialization','Doctor_phone_number','Doctor_email_address','Doctor_location']
+        fields = ['Profile_image','Doctor_firstname','Doctor_lastname','Doctor_gender','Doctor_department','Doctor_specialization','Doctor_phone_number','Doctor_email_address','Doctor_location']
     
     

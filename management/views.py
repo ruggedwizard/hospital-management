@@ -118,7 +118,7 @@ def reports_page(request):
 def profile_page(request):
     profile_details = Doctor.objects.get(Doctor_user_instance=request.user)
     doctors_patient = Patient.objects.filter(Patient_doctor=profile_details)
-    print(doctors_patient)
+    print(profile_details.Profile_image)
     context = {
         'doctors_patient':doctors_patient,
         'profile_details':profile_details
