@@ -48,7 +48,8 @@ def update_user_profile(request,pk):
         if profile_form.is_valid():
             updated_profile = profile_form.save(commit=False)
             updated_profile.Doctor_user_instance = user
-            updated_profile.save()            
+            updated_profile.save()     
+            return redirect('profile_page')       
             
         
     context = {
