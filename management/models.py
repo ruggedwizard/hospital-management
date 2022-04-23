@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth import get_user_model
+from django.contrib.auth.models import User
+
 # Create your models here.
 class Department(models.Model):
     Department_name = models.CharField(max_length=250, unique=True, blank=True, null=True)
@@ -23,19 +25,19 @@ GENDER = (
     )
 
 class Doctor(models.Model):
-    Doctor_user_instance = models.ForeignKey(get_user_model(),on_delete=models.CASCADE,null=True, blank=True)
-    # Profile_image = models.ImageField(upload_to="Image Folder")
+    Doctor_user_instance = models.OneToOneField(User,on_delete=models.CASCADE,null=True, blank=True)
+    # Profile_image = models.ImageField(upload_to="image")
     Doctor_firstname = models.CharField(max_length=250, null=True,blank=True)
     Doctor_lastname = models.CharField(max_length=250, null=True,blank=True)
     Doctor_gender = models.CharField(max_length=25, choices=GENDER, default="UNDECIDED")
-    Doctor_department = models.ForeignKey(Department,on_delete=models.CASCADE, related_name="doctor_department")
+    Doctor_department = models.ForeignKey(Department,on_delete=models.CASCADE, related_name="doctor_department", null=True, blank=True)
     Doctor_specialization = models.CharField(max_length=250, null=True, blank=True)
     Doctor_phone_number = models.CharField(max_length=250, null=True, blank=True)
     Doctor_email_address = models.EmailField(default="firstname.lastname@hospitalmanagement.com", null=True, blank=True)
     Doctor_location = models.CharField(max_length=250,null=True, blank=True)
 
     def __str__(self):
-        return "Dr. "+ self.Doctor_firstname+ " " + self.Doctor_lastname
+        return "Dr. Profile"
     
 
 
