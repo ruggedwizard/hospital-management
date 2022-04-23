@@ -49,9 +49,7 @@ def update_user_profile(request,pk):
             updated_profile = profile_form.save(commit=False)
             updated_profile.Doctor_user_instance = user
             updated_profile.save()     
-            return redirect('profile_page')       
-            
-        
+            return redirect('profile_page')        
     context = {
             'profile_form':profile_form,
             # 'user_form':user_form,
