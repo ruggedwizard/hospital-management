@@ -99,6 +99,7 @@ class Alloted_Beds(models.Model):
         return self.Bed_id.Room_ID + " is Alloted to " + self.Alloted_patient.Patient_lastname + " " + self.Alloted_patient.Patient_firstname
 
 class Nurse(models.Model):
+    Profile_image = models.ImageField(blank=True, null=True,default="Null")
     Nurse_lastname = models.CharField(max_length=250)
     Nurse_firstname = models.CharField(max_length=250)
     Nurse_email_address = models.EmailField(max_length=250, null=True, blank=True,default="email@hospitalmanagent.com")
