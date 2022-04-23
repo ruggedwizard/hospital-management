@@ -1,10 +1,10 @@
 from multiprocessing import context
 from traceback import print_tb
 from django.shortcuts import redirect, render
-from management.models import Alloted_Beds, Department, Doctor, Donors, Medicine, Patient
+from management.models import Alloted_Beds, Department, Doctor, Donors, Medicine, Nurse, Patient
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
-from management.forms import NewUserForm,CreateDoctorPofile
+from management.forms import NewUserForm,CreateDoctorPofile, CreateNurseProfile
 from django.contrib.auth.models import User
 
 
@@ -34,28 +34,59 @@ def sign_up_page(request):
     }
     return render(request,'management/Pages/signup_page.html',context)
 
-# To update user profile
+# To update Doctor profile
 @login_required(login_url=welcome_page)
 def update_user_profile(request,pk):
     user = User.objects.get(id=pk)
     Doctor.objects.get_or_create(Doctor_user_instance=user)
     this = Doctor.objects.get(Doctor_user_instance=user)
 
+   
+
     profile_form = CreateDoctorPofile(instance=this)
-    user_form = NewUserForm(instance=request.user)
+
+
+
     if request.method == 'POST':
         profile_form = CreateDoctorPofile(request.POST,instance=this)
         if profile_form.is_valid():
             updated_profile = profile_form.save(commit=False)
             updated_profile.Doctor_user_instance = user
             updated_profile.save()     
-            return redirect('profile_page')        
+            return redirect('profile_page')  
+
     context = {
-            'profile_form':profile_form,
-            # 'user_form':user_form,
+            'profile_form':profile_form,  
         }
 
     return render(request,'management/Pages/test_page.html',context)
+
+def update_nurse_profile(request,pk):
+    user = User.objects.get(id=pk)
+    Nurse.objects.get_or_create(Nurse_user_instance=user)
+    that = Nurse.objects.get(Nurse_user_instance=user)
+    user_form = CreateNurseProfile(instance=that)
+    
+    if request.method == 'POST':
+        profile_form = CreateNurseProfile(request.POST,instance=that)
+        if profile_form.is_valid():
+            updated_profile = profile_form.save(commit=False)
+            updated_profile.Nurse_user_instance = user
+            updated_profile.save()     
+            return redirect('nurse_profile')  
+    context = {
+        'user_form':user_form
+    }
+    return render(request,'management/Pages/update_nurse_profile.html', context)
+
+# This view is responsibe for nurse profile
+def nurse_profile(request):
+    profile_details = Nurse.objects.get(Nurse_user_instance=request.user)
+
+    context ={
+        'profile_details':profile_details
+    }
+    return render(request,'management/Pages/nurse_profile_page.html',context)
 
 @login_required(login_url=welcome_page)
 def departments_page(request):
@@ -113,12 +144,12 @@ def beds_page(request):
 def reports_page(request):
     return render(request,'management/Pages/reports_page.html')
 
-# This view is responsible to get the current logged user profile data
+# This view is responsible to get the current logged user Doctors profile data
 @login_required(login_url=welcome_page)
 def profile_page(request):
     profile_details = Doctor.objects.get(Doctor_user_instance=request.user)
     doctors_patient = Patient.objects.filter(Patient_doctor=profile_details)
-    print(profile_details.Profile_image)
+    print(profile_details.Profile_image.url)
     context = {
         'doctors_patient':doctors_patient,
         'profile_details':profile_details

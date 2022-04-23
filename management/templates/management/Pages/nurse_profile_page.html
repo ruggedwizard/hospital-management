@@ -1,0 +1,32 @@
+{% extends 'management/index.html' %}
+{% load static %}
+{% block content %}
+<div class="wrapper">
+    <div class="title-holder">
+        <h5 class="title">Nurse Profile Page</h5>
+    </div>
+    <div class="profile-details">
+        
+        <img class="image-holder" src="{{profile_details.Profile_image.url}}" alt="profile_picture">
+    
+    <div class="profile-text">
+        <h4>{{profile_details}}</h4>
+        <h6>{{profile_details.Nurse_email_address}}</h6>
+        <a class="btn" href="{% url 'update_profile' request.user.id %}">Update Profile</a>
+        <hr>
+        <div class="row">
+            <div class="col l6">
+                <label for="firstname">Firstname:</label>
+                <input type="text" name="firstname" id="firstname" value="{{profile_details.Nurse_firstname}}" disabled>
+                <label for="lastname">Lastname:</label>
+                <input type="text" name="lastname" id="lastname" value="{{profile_details.Nurse_lastname}}" disabled>
+                <label for="email">Email address:</label>
+                <input type="text" name="department" id="email" value="{{profile_details.Nurse_email_address}}" disabled>
+            </div>
+            
+        </div>
+    </div>
+</div>
+    
+</div>
+{% endblock content %}

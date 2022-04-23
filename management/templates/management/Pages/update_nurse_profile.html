@@ -4,21 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testpage</title>
+    <title>Update Nurse Profile</title>
 </head>
 <body>
-
-    <h3>Update Profile</h3>
-    
-    <!-- Doctors Segment -->
-
     <form action="" method="post">
         {% csrf_token %}
-        <!-- {{user_form.as_p}} -->
-        {{profile_form.as_p}}
+        {{user_form.as_p}}
         <button type="submit">Update Profile</button>
     </form>
-
-    <!-- Nurse segment-->
 </body>
 </html>

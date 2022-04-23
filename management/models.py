@@ -100,6 +100,7 @@ class Alloted_Beds(models.Model):
 
 class Nurse(models.Model):
     Profile_image = models.ImageField(blank=True, null=True,default="Null")
+    Nurse_user_instance = models.OneToOneField(User,on_delete=models.CASCADE, null=True, blank=True)
     Nurse_lastname = models.CharField(max_length=250)
     Nurse_firstname = models.CharField(max_length=250)
     Nurse_email_address = models.EmailField(max_length=250, null=True, blank=True,default="email@hospitalmanagent.com")

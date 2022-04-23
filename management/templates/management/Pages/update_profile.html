@@ -11,21 +11,23 @@
         <form action="" method="post">
             {% csrf_token %}
             {{form.as_p}}
-            <!-- <label for="firstname">Firstname:</label>
-            <input type="text" name="firstname" id="firstname">
-            <label for="lastname">Lastname:</label>
-            <input type="text" name="lastname" id="lastname">
-            <label for="specialization">Specialization:</label>
-            <input type="text" name="specialization" id="specialization">
-            <label for="phone-number">Phone number:</label>
-            <input type="text" name="phone-number" id="phone-number">
-            <label for="email-address"> Office Email address:</label>
-            <input type="text" name="email-address" id="email-address">
-            <label for="email-address"> Office Email address:</label>
-            <input type="text" name="email-address" id="email-address">
-             -->
             <button type="submit" class="btn">Update Profile</button>
         </form>
     </div>
+
+    <!-- Nurse Sections -->
+    <div class="title-holder">
+        <h5 class="title">Nurse</h5>
+    </div>
+
+    <div class="display-list">
+        <h3>Nurse Details to Update</h3>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit" class="btn">Update Profile</button>
+        </form>
+    </div>
+
 </div>
 {% endblock content %}

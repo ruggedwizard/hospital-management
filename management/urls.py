@@ -13,6 +13,8 @@ urlpatterns = [
     path('beds/',views.beds_page, name="beds_page"),
     path('reports/',views.reports_page, name="reports_page"),
     path('profile_page/',views.profile_page, name="profile_page"),
-    path('update_profile/<int:pk>/',views.update_user_profile,name="update_profile"),
+    path('nurse_profile_page/', views.nurse_profile,name="nurse_profile"),
+    path('update_doctor_profile/<int:pk>/',views.update_user_profile,name="update_profile"),
+    path('update_nurse_profile/<int:pk>/',views.update_nurse_profile,name="update_profile"),
     path('logout_user/',views.logout_user, name="logout"),
 ]
