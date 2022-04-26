@@ -1,9 +1,32 @@
-from multiprocessing import context
 from django.shortcuts import render
-from management.models import Doctor
+from management.models import Doctor,Appointment
+from base.forms import MakeAppointment
+
+
 # Create your views here.
 def landing_page(request):
-    return render(request,'base/Pages/landing_page.html')
+    forms = MakeAppointment()
+    if request.method == 'POST':
+        fullname=request.POST['fullname']
+        email=request.POST['contact_email']
+        date_of_appointment = request.POST['date_of_appointment']
+        reason_for_appointment = request.POST['reason_for_appointment']
+        contact_phone = request.POST['phone_number']
+        appointment = Appointment.objects.create(Fullname=fullname,Contact_email=email,Contact_phone=contact_phone,Reason_for_Appointment=reason_for_appointment,Appointment_date=date_of_appointment)
+        appointment.save()
+
+        data = {
+            'fullname':fullname,
+            'email':email,
+            'date_of_appointment':date_of_appointment,
+            'reason_for_appointment':reason_for_appointment
+        }
+        print(data)
+
+    context = {
+        'forms':forms
+    }
+    return render(request,'base/Pages/landing_page.html',context)
 
 def login_page(request):
 

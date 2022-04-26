@@ -10,24 +10,30 @@
     </div>
 
 
+
+
 <!-- Make an appointment Section -->
 <div class="appointment-holder container">
     <div class="form-holder">
         <h6 style="text-align:center">Make an Appointment</h6>
         <form action="" method="post">
+            {% csrf_token %}
             <!-- Fullname -->
             <label for="full-name"><p>Full Name:</p></label>
-            <input type="text" placeholder="Fullname" name="full-name" id="full-name">
+            <input type="text" placeholder="Fullname" name="fullname" id="fullname">
+            <!-- Phone Number -->
+            <label for="phone_number"><p>Phone Number:</p></label>
+            <input type="text" placeholder="(+234)-800-REM-EDIC" name="phone_number" id="phone_number">
             <!-- Email Address -->
             <label for="contact-email"><p>Contact Email (Optional):</p></label>
-            <input type="text" placeholder="email@example.com" name="contact-email" id="contact-email">
+            <input type="text" placeholder="email@example.com" name="contact_email" id="contact_email">
             <!-- Date -->
             <label for="date-of-appointment"><p>Select a Date:</p></label>
-            <input type="datetime-local" name="date-of-appointment" id="date-of-appointment">
+            <input type="datetime-local" name="date_of_appointment" id="date_of_appointment">
             <!-- Reason For Appointment -->
-            <label for="reason-for-appointment"><p>Reason for Appointment:</p></label>
-            <textarea name="reason-for-appointment" id="reason-for-appointment" cols="30" rows="50"></textarea>
-            <button class="btn">Make an Appointment</button>
+            <label for="reason_for_appointment"><p>Reason for Appointment:</p></label>
+            <textarea name="reason_for_appointment" id="reason_for_appointment" cols="30" rows="50"></textarea>
+            <button type="submit" class="btn">Make an Appointment</button>
         </form>
 
     </div>

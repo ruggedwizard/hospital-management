@@ -67,7 +67,7 @@ class Appointment(models.Model):
     Fullname = models.CharField(max_length=250)
     Contact_email = models.EmailField(max_length=500, default="notprovided@example.com", null=True, blank=True)
     Contact_phone = models.CharField(max_length=250)
-    Appointment_date = models.DateTimeField()
+    Appointment_date = models.DateField()
     Reason_for_Appointment = models.TextField(max_length=2500)
     Appointment_completed = models.BooleanField(default=False, null=True, blank=True)
 
