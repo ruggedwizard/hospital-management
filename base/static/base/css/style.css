@@ -164,6 +164,39 @@ li:hover{
 }
 .left-sick-image{
     height: 400px;
-    margin-top: -40em;
+    margin-top: -50em;
     margin-left: 1100px;
 }
+.story-holder{
+    margin-left: 10em;
+    margin-right: 10em;
+    line-height: 2em;
+    text-align: justify;
+    font-size: 17px;
+}
+.about-remedic-title{
+    text-align: center;
+}
+.message-for-doctor{
+    border: 2px solid lightseagreen;
+    height: 90px;
+}
+.message-for-doc-btn{
+    background-color: lightseagreen;
+    width: 200px;
+    height: 40px;
+    margin-bottom: 1em;
+    border: seagreen;
+    border-radius: 0.3em;
+    color: white;
+    font-weight: bold;
+}
+.leave-a-message-dialog{
+    width: 500px;
+    height: 350px;
+    margin-left: 23em;
+    display: block;
+    border: 1px solid lightseagreen;
+    padding: 2em;
+    margin-bottom: 3em;
+}  

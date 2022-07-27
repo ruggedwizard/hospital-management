@@ -39,7 +39,19 @@
     </div>
     <!-- End of Illness Description -->
     <!-- Second Sick person image -->
+    <!-- contact-the-doctor -->
+    <div class="leave-a-message-dialog">
+        <h5>Leave a Message for the doctor</h5>
+        <form action="" method="get">
+            <label for="email">Email Address:</label>
+            <input type="email" placeholder="Email Address">
+            <br>
+            <label for="message">Message for the Doctor</label>
+            <textarea name="message" class="message-for-doctor" cols="40" rows="20"></textarea>
+            <button class="message-for-doc-btn">Leave a Message</button>
+        </form>
+    </div>
+    <!-- end of contact-the-doctor -->
     <img src="{% static 'base/images/doctor-long.jpeg' %}" alt="a sick boy" class="left-sick-image">
-    
 </div>
 {% endblock content %}
