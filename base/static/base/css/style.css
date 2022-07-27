@@ -148,3 +148,22 @@ li:hover{
 .card-holder{
     margin-left: 2em;
 }
+.contact-title{
+    text-align: center;
+}
+.sick-person{
+    width: 300px;
+    height: 300px;
+    margin-left: 3em;
+}
+.illness-text{
+    margin-left: 350px;
+    margin-bottom: 3em;
+    margin-top: -20em;
+    line-height: 2em;
+}
+.left-sick-image{
+    height: 400px;
+    margin-top: -40em;
+    margin-left: 1100px;
+}

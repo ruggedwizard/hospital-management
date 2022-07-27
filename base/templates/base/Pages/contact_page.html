@@ -2,6 +2,44 @@
 {% load static %}
 {% block content %}
 <div>
-    <h4>Having Health Issues?😷</h4>
+    <h4 class="contact-title">Having Health Issues?😷</h4>
+    <img src="{% static 'base/images/sick.jpg' %}" alt="person with fever" class="sick-person">
+    <div class="illness-text">
+        <p>Do the Following:</p>
+        <p>Step 1:</p>
+        <b>Take Temprature</b>
+        <p>Temprature can be taken orally, rectally or under the armpit.</p>
+        <p>A Person is typically considered feverish if oral temprature is above 100F(37.8 C) or temprature is above 99.5 F (37.5 C)</p>
+        <p>A Temprature above normal but below 100.4 F (38 C) is sometimes considered a low-grade or mild fever</p>
+        <p>It may mean that the body is responding to an infection. </p>
+        <br>
+        <p>Step 2:</p>
+        <b>Treat Fever, if Necessary</b>
+        <p>No treatment is necessary for a mild fever unless the person is uncomfortable. if the fever is 102 or higer</p>
+        <p>Give an over-the-counter medicine such as <pre>Acetaminophen (Tylenol) or Ibuprofen (Advil, Motrin)</pre> as directed on the label.</p>
+        <p>Check with your doctor first if you have any medical conditions or other medicines.</p>
+        <b>Warning Do Not Self Medicate!!</b>
+        <br>
+        <p>Bathing or spoinging in lukewarm water may bring the temprature down. do not use cold water or alcohol.</p>
+        <p>Have the person wear light clothing and use a light cover or sheet -- over dressing can make body temprature go up. </p>
+        <br>
+        <p>Step 3:</p>
+        <b>Give Liquids</b>
+        <p>have the person drink plenty of fluids to stay hydrated</p>
+        <br>
+        <b>When to Contact a Doctor 🤷‍♂️?</b>
+        <p>Seek medical help immediately if the person has:</p>
+        <ul>
+            <li>a history of serious illness such as Heart disease or diabetes, or if the person is taking immunosuppresant drugs</li>
+            <li>A high fever that doesn't respond to fever-reducing medicine</li>
+            <li>Been exposed to extremely hot weather and feels hot but is not sweating</li>
+            <li>A Stiff neck, is confused, or has trouble staying awake</li>
+            <li>Severe pain in the lower abdomen</li>
+        </ul>
+    </div>
+    <!-- End of Illness Description -->
+    <!-- Second Sick person image -->
+    <img src="{% static 'base/images/doctor-long.jpeg' %}" alt="a sick boy" class="left-sick-image">
+    
 </div>
 {% endblock content %}

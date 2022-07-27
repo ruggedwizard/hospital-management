@@ -3,7 +3,7 @@ from django.shortcuts import redirect, render
 from management.models import Alloted_Beds, Birth_report, Department, Doctor, Donors, Medicine, Nurse, Patient
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
-from management.forms import NewUserForm,CreateDoctorPofile, CreateNurseProfile
+from management.forms import NewUserForm,CreateDoctorPofile, CreateNurseProfile, AddPatient
 from django.contrib.auth.models import User
 
 
@@ -60,7 +60,7 @@ def update_nurse_profile(request,pk):
     Nurse.objects.get_or_create(Nurse_user_instance=user)
     that = Nurse.objects.get(Nurse_user_instance=user)
     user_form = CreateNurseProfile(instance=that)
-    
+
     if request.method == 'POST':
         profile_form = CreateNurseProfile(request.POST,instance=that)
         if profile_form.is_valid():
@@ -72,6 +72,15 @@ def update_nurse_profile(request,pk):
         'user_form':user_form
     }
     return render(request,'management/Pages/update_nurse_profile.html', context)
+
+# Add Patient To the Database by a current User
+def add_patient(request):
+    patient_form = AddPatient()
+
+    context ={
+        'patient_form':patient_form
+    }
+    return render(request,'management/Pages/add_patient.html',context)
 
 # This view is responsibe for nurse profile
 @login_required(login_url=welcome_page)
@@ -158,6 +167,7 @@ def profile_page(request):
     return render(request,'management/Pages/profile_page.html', context)
 
 # This view is responsible to get the Doctors patients details
+@login_required(login_url=welcome_page)
 def patient_details_page(request,pk):
     patient_data = Patient.objects.get(id=pk)
     checked_in = Alloted_Beds.objects.get(Alloted_patient=patient_data)

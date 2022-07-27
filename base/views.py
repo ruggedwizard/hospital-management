@@ -14,15 +14,6 @@ def landing_page(request):
         contact_phone = request.POST['phone_number']
         appointment = Appointment.objects.create(Fullname=fullname,Contact_email=email,Contact_phone=contact_phone,Reason_for_Appointment=reason_for_appointment,Appointment_date=date_of_appointment)
         appointment.save()
-
-        data = {
-            'fullname':fullname,
-            'email':email,
-            'date_of_appointment':date_of_appointment,
-            'reason_for_appointment':reason_for_appointment
-        }
-        print(data)
-
     context = {
         'forms':forms
     }
