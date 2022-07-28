@@ -208,3 +208,26 @@ li:hover{
 .story-holder-2{
     margin-left: 29em;
 }
+
+.blog-text-holder{
+    width: 400px;
+    border: 1px solid lightseagreen;
+    margin-left: 4em;
+    padding: 1em;
+    text-align: justify;
+    margin-bottom: 2em;
+}
+
+.continue-reading-btn{
+    background-color: lightseagreen;
+    color: white;
+    font-weight: bold;
+    padding: 0.6em;
+    border-radius: 0.3em;
+    display: inline;
+}
+.doctors-name{
+    margin-left: 10em;
+    margin-top: -1.5em;
+    opacity: 0.7;
+}
