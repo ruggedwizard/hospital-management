@@ -10,6 +10,9 @@ i found out a lot while carrying out a research and i am trying to breach this g
 <!-- The User Website  -->
 # The User Website Here the user can view about the hospital make appointment as seen on the navbar
 ![Screenshot (80)](https://user-images.githubusercontent.com/40686166/164814321-32c6ff29-2d8b-4e96-b424-c5792e9cfdeb.png)
+![Screenshot (158)](https://user-images.githubusercontent.com/40686166/181853892-93b82d41-8fd8-4275-9ef0-4c515556d7f2.png)
+![Screenshot (159)](https://user-images.githubusercontent.com/40686166/181853896-3375f442-cb98-47ca-aa12-1191d95ca838.png)
+![Screenshot (157)](https://user-images.githubusercontent.com/40686166/181853898-dc3e2d78-248a-4aad-8560-611fa9d7570c.png)
 
 <!-- The Landing Page -->
 # The Management App Login Page
