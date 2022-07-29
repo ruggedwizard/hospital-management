@@ -2,6 +2,42 @@
 {% load static %}
 {% block content %}
 <div>
-    <h4>Departments Within the Hospital🏥</h4>
+    <h4 class="department-title">Departments Within the Hospital🏥</h4>
+    <!-- Begining of Doctor's Card -->
+    <div class="first-card">
+        <section class="department-doctor-text">
+            <h4 style="text-align: center;">Doctors and Surgeon</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ducimus eligendi ratione debitis sit fuga, iusto quos dolor similique rem sint voluptates. Iure ipsam molestiae quam id esse impedit fuga? Rem iste deleniti maiores incidunt unde. Aliquam accusamus facilis alias dolor debitis quod quia inventore reiciendis architecto dicta. At magni quia maxime et suscipit sint non recusandae, deserunt eaque! Quod eligendi corrupti provident! Praesentium, possimus! Non voluptatum molestiae amet quisquam adipisci veritatis, aspernatur nihil dolores ad iste ut at ea nostrum expedita autem eos obcaecati quasi velit sint quis reiciendis vero architecto omnis culpa. Rerum doloremque necessitatibus quod iure dolorem.</p>
+        </section>
+        <img class="department-of-doctors" src="{% static 'base/images/group-doc-1.jpg' %}" alt="Group of doctors">
+    </div>
+    <!-- End of Doctor's card -->
+    <!-- Begining of Nurse card -->
+    <div class="second-card">
+        <section class="department-nurse-text">
+            <h4 style="text-align: center;">Nurse and Care Givers</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ducimus eligendi ratione debitis sit fuga, iusto quos dolor similique rem sint voluptates. Iure ipsam molestiae quam id esse impedit fuga? Rem iste deleniti maiores incidunt unde. Aliquam accusamus facilis alias dolor debitis quod quia inventore reiciendis architecto dicta. At magni quia maxime et suscipit sint non recusandae, deserunt eaque! Quod eligendi corrupti provident! Praesentium, possimus! Non voluptatum molestiae amet quisquam adipisci veritatis, aspernatur nihil dolores ad iste ut at ea nostrum expedita autem eos obcaecati quasi velit sint quis reiciendis vero architecto omnis culpa. Rerum doloremque necessitatibus quod iure dolorem.</p>
+        </section>
+        <img class="department-of-nurse" src="{% static 'base/images/nurse-group-2.jpg' %}" alt="Group of doctors">
+    </div>
+    <!-- End of Nurse Card -->
+    <!-- Begining of Laboratory Card -->
+    <div class="first-card">
+        <section class="department-lab-text">
+            <h4 style="text-align: center;">Laboratory</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ducimus eligendi ratione debitis sit fuga, iusto quos dolor similique rem sint voluptates. Iure ipsam molestiae quam id esse impedit fuga? Rem iste deleniti maiores incidunt unde. Aliquam accusamus facilis alias dolor debitis quod quia inventore reiciendis architecto dicta. At magni quia maxime et suscipit sint non recusandae, deserunt eaque! Quod eligendi corrupti provident! Praesentium, possimus! Non voluptatum molestiae amet quisquam adipisci veritatis, aspernatur nihil dolores ad iste ut at ea nostrum expedita autem eos obcaecati quasi velit sint quis reiciendis vero architecto omnis culpa. Rerum doloremque necessitatibus quod iure dolorem.</p>
+        </section>
+        <img class="department-of-laboratory" src="{% static 'base/images/lab-assistant.jpg' %}" alt="Group of doctors">
+    </div>
+    <!-- End of Laboratory Card -->
+    <!-- Begingining of Pharmacy Department -->
+    <div class="second-card">
+        <section class="department-nurse-text">
+            <h4 style="text-align: center;">Pharmacy</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ducimus eligendi ratione debitis sit fuga, iusto quos dolor similique rem sint voluptates. Iure ipsam molestiae quam id esse impedit fuga? Rem iste deleniti maiores incidunt unde. Aliquam accusamus facilis alias dolor debitis quod quia inventore reiciendis architecto dicta. At magni quia maxime et suscipit sint non recusandae, deserunt eaque! Quod eligendi corrupti provident! Praesentium, possimus! Non voluptatum molestiae amet quisquam adipisci veritatis, aspernatur nihil dolores ad iste ut at ea nostrum expedita autem eos obcaecati quasi velit sint quis reiciendis vero architecto omnis culpa. Rerum doloremque necessitatibus quod iure dolorem.</p>
+        </section>
+        <img class="department-of-nurse" src="{% static 'base/images/pharmacry.jpg' %}" alt="Group of doctors">
+    </div>
+    <!-- End of Pharmarcy department -->
 </div>
 {% endblock content %}

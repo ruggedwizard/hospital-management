@@ -236,3 +236,57 @@ li:hover{
     display: grid; 
     position: relative;
 }
+/* Begining of Departsment */
+.department-title{
+    text-align: center;
+}
+.first-card{
+    border: 1px solid lightseagreen;
+    height: 330px;
+    width: 1100px;
+    margin-bottom: 2em;
+    margin-left: 6em;
+    padding: 1em;
+   
+}
+
+.department-of-doctors{
+    width: 400px;
+    margin-left: 650px;
+    margin-top: -15.5em;
+}
+.department-doctor-text{
+    width: 750px;
+    text-align: justify;
+
+}
+
+.department-of-nurse{
+    width: 340px;
+    height: 280px;
+    margin-top: -15.5em;
+}
+.department-nurse-text{
+    width: 680px;
+    text-align: justify;
+    margin-left: 350px;
+}
+.second-card{
+    border: 1px solid lightseagreen;
+    height: 330px;
+    width: 1100px;
+    margin-bottom: 2em;
+    margin-left: 6em;
+    padding: 1em;
+}
+
+.department-of-laboratory{
+    width: 300px;
+    margin-left: 750px;
+    margin-top: -15.5em;
+}
+.department-lab-text{
+    width: 750px;
+    text-align: justify;
+}
+/* end of Department */
