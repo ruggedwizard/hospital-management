@@ -35,7 +35,8 @@ class Doctor(models.Model):
 
     def __str__(self):
         return self.Doctor_firstname + self.Doctor_lastname + " Account Details"
-    
+
+
 
 
 class Patient(models.Model):

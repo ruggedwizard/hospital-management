@@ -207,15 +207,20 @@ li:hover{
 }
 .story-holder-2{
     margin-left: 29em;
+    margin: 4em;
 }
 
+/* blog page */
 .blog-text-holder{
     width: 400px;
     border: 1px solid lightseagreen;
     margin-left: 4em;
     padding: 1em;
+    margin-right: 3em;
     text-align: justify;
     margin-bottom: 2em;
+    margin:2em;
+    height: 190px;
 }
 
 .continue-reading-btn{
@@ -236,6 +241,7 @@ li:hover{
     display: grid; 
     position: relative;
 }
+/* end of blog page */
 /* Begining of Departsment */
 .department-title{
     text-align: center;
@@ -289,4 +295,10 @@ li:hover{
     width: 750px;
     text-align: justify;
 }
+
+.doctors-logo{
+    width: 100px;
+    /* margin-left: 5em; */
+}
 /* end of Department */
+
