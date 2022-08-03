@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+<!-- Begining of new navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="./medicine-logo.png" class="medical-logo-navbar" alt="medical-logo"> <span class="first-text-logo">RE</span><span class="second-text-logo">MEDIC</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link menu" aria-current="page" href="#">Home</a>
+          <a class="nav-link menu" href="#">About</a>
+          <a class="nav-link menu" href="#">Department</a>
+          <a class="nav-link menu" href="#">Doctors</a>
+          <a class="nav-link menu" href="#">Blog</a>
+          <a class="nav-link menu" href="#">Contact</a>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+<!-- End of new navbar -->
+
+<h3 style="text-align: center;">Having Health Issues?</h3>
+<img src="./sick.jpg" alt="a sick person" class="contact-us-sick-img">
+<div class="illness-text">
+    <p>Do the Following:</p>
+    <p>Step 1:</p>
+    <b>Take Temprature</b>
+    <p>Temprature can be taken orally, rectally or under the armpit.</p>
+    <p>A Person is typically considered feverish if oral temprature is above 100F(37.8 C) or temprature is above 99.5 F (37.5 C)</p>
+    <p>A Temprature above normal but below 100.4 F (38 C) is sometimes considered a low-grade or mild fever</p>
+    <p>It may mean that the body is responding to an infection. </p>
+    <br>
+    <p>Step 2:</p>
+    <b>Treat Fever, if Necessary</b>
+    <p>No treatment is necessary for a mild fever unless the person is uncomfortable. if the fever is 102 or higer</p>
+    <p>Give an over-the-counter medicine such as <pre>Acetaminophen (Tylenol) or Ibuprofen (Advil, Motrin)</pre> as directed on the label.</p>
+    <p>Check with your doctor first if you have any medical conditions or other medicines.</p>
+    <b>Warning Do Not Self Medicate!!</b>
+    <br>
+    <p>Bathing or spoinging in lukewarm water may bring the temprature down. do not use cold water or alcohol.</p>
+    <p>Have the person wear light clothing and use a light cover or sheet -- over dressing can make body temprature go up. </p>
+    <br>
+    <p>Step 3:</p>
+    <b>Give Liquids</b>
+    <p>have the person drink plenty of fluids to stay hydrated</p>
+    <br>
+    <b>When to Contact a Doctor 🤷‍♂️?</b>
+    <p>Seek medical help immediately if the person has:</p>
+    <ul>
+        <li>a history of serious illness such as Heart disease or diabetes, or if the person is taking immunosuppresant drugs</li>
+        <li>A high fever that doesn't respond to fever-reducing medicine</li>
+        <li>Been exposed to extremely hot weather and feels hot but is not sweating</li>
+        <li>A Stiff neck, is confused, or has trouble staying awake</li>
+        <li>Severe pain in the lower abdomen</li>
+    </ul>
+</div>
+<!-- Send a message to doctor -->
+<div>
+    <form class="leave-a-message-dialog">
+        <h3 style="text-align: center;">Leave a message for the doctor</h3>
+       
+       <div class="mb-3">
+         <label for="exampleInputEmail1" class="form-label">Email address:</label>
+         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+         
+       </div>
+       
+       <div class="mb-3">
+         <label for="exampleInputEmail1" class="form-label">Message for the Doctor:</label>
+         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+       </div>
+       <button type="submit" class="btn btn-primary">Submit</button>
+     </form>
+     
+</div>
+
+<!-- end of send a message doctor -->
+
+
+<!-- Footer -->
+<div class="footer">
+  <div class="footer-logo">
+      <h5 class="first-text-logo"><img class="medical-logo-navbar" src="./medicine-logo.png" alt="medicine-logo">RE<span class="second-text-logo">MEDIC</span></h5>
+  </div>
+  <div class="menu-list">
+      <ul>
+          <li> <a href="/">Home</a></li>
+          <li> <a href="{% url 'about_page' %}">About</a></li>
+          <li> <a href="{% url 'department_page' %}">Departments</a></li>
+          <li> <a href="{% url 'doctor_page' %}">Doctors</a></li>
+          <li> <a href="{% url 'blog_page' %}">Blog</a></li>
+          <li> <a href="{% url 'conatct_us_page' %}">Contact</a></li>
+  </div>
+  <!-- <p style="text-align: center; color: white;">&copy; remedic 2022</p> -->
+</div>
+<!-- end of footer -->
+</body>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</html>

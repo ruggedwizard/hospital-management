@@ -302,3 +302,61 @@ li:hover{
 }
 /* end of Department */
 
+
+/* Mobile Screen css */
+@media screen and (max-width: 415px) {
+    .text-value-big{
+        margin-top: 2em;
+        font-size: 25px;
+        /* color: lightseagreen; */
+    }
+    .text-value-small{
+        font-size: 15px;
+        /* color: lightseagreen; */
+    }
+    .text-holder{
+        width: auto;
+        margin-left: auto;
+        padding: 2em;
+        /* height: 100px; */
+        /* margin-top: 20px; */
+    }
+    .image-background{
+        width: auto ;
+        height: auto;
+        display: none;
+        margin-top: 10em;
+    }
+
+    .main-content{
+        width: auto;
+        margin-top: 15em;
+        height: 20;
+    }
+
+    .appointment-holder{
+        width: auto;
+        margin: 0;
+        
+    }
+    .nav-container{
+        display: none;
+    }
+    .navbar{
+        width: auto;
+        display: none;
+
+    }
+    /* footer */
+    .footer{
+        width: auto;
+    }
+    .form-holder{
+        width: auto;
+    }
+    .navigation{
+        margin: 0;
+    }
+
+
+}
