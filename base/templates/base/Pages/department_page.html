@@ -1,43 +1,43 @@
 {% extends 'base/index.html' %}
 {% load static %}
 {% block content %}
-<div class="row">
-    <h4 class="department-title">Departments Within the Hospital🏥</h4>
-    <!-- Begining of Doctor's Card -->
-    <div class="first-card">
-        <section class="department-doctor-text">
-            <h4 style="text-align: center;">Doctors and Surgeon</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ducimus eligendi ratione debitis sit fuga, iusto quos dolor similique rem sint voluptates. Iure ipsam molestiae quam id esse impedit fuga? Rem iste deleniti maiores incidunt unde. Aliquam accusamus facilis alias dolor debitis quod quia inventore reiciendis architecto dicta. At magni quia maxime et suscipit sint non recusandae, deserunt eaque! Quod eligendi corrupti provident! Praesentium, possimus! Non voluptatum molestiae amet quisquam adipisci veritatis, aspernatur nihil dolores ad iste ut at ea nostrum expedita autem eos obcaecati quasi velit sint quis reiciendis vero architecto omnis culpa. Rerum doloremque necessitatibus quod iure dolorem.</p>
-        </section>
-        <img class="department-of-doctors" src="{% static 'base/images/group-doc-1.jpg' %}" alt="Group of doctors">
+<h3 style="text-align:center">Departments within the Hospital 🏥</h3>
+
+<!-- Doctors Department -->
+<div class="departments-text-holder-1 col-sm container">
+    <div class="doctors-text">
+        <h3 style="text-align:center">Doctors and Surgeon🩺</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum nobis expedita odit, nam reiciendis tempora totam aliquid rerum cumque voluptatibus velit facere perferendis fugiat at, ab doloremque non nulla? Perspiciatis, tempore vero! Doloremque eveniet facilis iusto ea esse perspiciatis in voluptatum eos facere, alias, aut minus repellendus totam odit distinctio vero natus voluptates. Iste in aperiam vero laborum dolores labore, repellat harum enim voluptatibus sit reprehenderit, a architecto ducimus corporis itaque nam corrupti fuga sed amet facere culpa similique dolorum dolore! Distinctio perspiciatis sequi, atque doloribus enim, unde nesciunt vel et quaerat, labore veniam eum veritatis ratione officia velit delectus?</p>
     </div>
-    <!-- End of Doctor's card -->
-    <!-- Begining of Nurse card -->
-    <div class="second-card">
-        <section class="department-nurse-text">
-            <h4 style="text-align: center;">Nurse and Care Givers</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ducimus eligendi ratione debitis sit fuga, iusto quos dolor similique rem sint voluptates. Iure ipsam molestiae quam id esse impedit fuga? Rem iste deleniti maiores incidunt unde. Aliquam accusamus facilis alias dolor debitis quod quia inventore reiciendis architecto dicta. At magni quia maxime et suscipit sint non recusandae, deserunt eaque! Quod eligendi corrupti provident! Praesentium, possimus! Non voluptatum molestiae amet quisquam adipisci veritatis, aspernatur nihil dolores ad iste ut at ea nostrum expedita autem eos obcaecati quasi velit sint quis reiciendis vero architecto omnis culpa. Rerum doloremque necessitatibus quod iure dolorem.</p>
-        </section>
-        <img class="department-of-nurse" src="{% static 'base/images/nurse-group-2.jpg' %}" alt="Group of doctors">
-    </div>
-    <!-- End of Nurse Card -->
-    <!-- Begining of Laboratory Card -->
-    <div class="first-card">
-        <section class="department-lab-text">
-            <h4 style="text-align: center;">Laboratory</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ducimus eligendi ratione debitis sit fuga, iusto quos dolor similique rem sint voluptates. Iure ipsam molestiae quam id esse impedit fuga? Rem iste deleniti maiores incidunt unde. Aliquam accusamus facilis alias dolor debitis quod quia inventore reiciendis architecto dicta. At magni quia maxime et suscipit sint non recusandae, deserunt eaque! Quod eligendi corrupti provident! Praesentium, possimus! Non voluptatum molestiae amet quisquam adipisci veritatis, aspernatur nihil dolores ad iste ut at ea nostrum expedita autem eos obcaecati quasi velit sint quis reiciendis vero architecto omnis culpa. Rerum doloremque necessitatibus quod iure dolorem.</p>
-        </section>
-        <img class="department-of-laboratory" src="{% static 'base/images/lab-assistant.jpg' %}" alt="Group of doctors">
-    </div>
-    <!-- End of Laboratory Card -->
-    <!-- Begingining of Pharmacy Department -->
-    <div class="second-card">
-        <section class="department-nurse-text">
-            <h4 style="text-align: center;">Pharmacy</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ducimus eligendi ratione debitis sit fuga, iusto quos dolor similique rem sint voluptates. Iure ipsam molestiae quam id esse impedit fuga? Rem iste deleniti maiores incidunt unde. Aliquam accusamus facilis alias dolor debitis quod quia inventore reiciendis architecto dicta. At magni quia maxime et suscipit sint non recusandae, deserunt eaque! Quod eligendi corrupti provident! Praesentium, possimus! Non voluptatum molestiae amet quisquam adipisci veritatis, aspernatur nihil dolores ad iste ut at ea nostrum expedita autem eos obcaecati quasi velit sint quis reiciendis vero architecto omnis culpa. Rerum doloremque necessitatibus quod iure dolorem.</p>
-        </section>
-        <img class="department-of-nurse" src="{% static 'base/images/pharmacry.jpg' %}" alt="Group of doctors">
-    </div>
-    <!-- End of Pharmarcy department -->
+    <img src="{% static 'base/images/group-doc-1.jpg' %}" alt="group of doctors" class="doctors-group-img">
 </div>
+<!-- end of doctors department -->
+<!-- Nurse and Care givers -->
+<div class="departments-text-holder-2 col-sm container">
+    <div class="nurse-text">
+        <h3 style="text-align:center">Nurse and Care Givers🤱🏻</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum nobis expedita odit, nam reiciendis tempora totam aliquid rerum cumque voluptatibus velit facere perferendis fugiat at, ab doloremque non nulla? Perspiciatis, tempore vero! Doloremque eveniet facilis iusto ea esse perspiciatis in voluptatum eos facere, alias, aut minus repellendus totam odit distinctio vero natus voluptates. Iste in aperiam vero laborum dolores labore, repellat harum enim voluptatibus sit reprehenderit, a architecto ducimus corporis itaque nam corrupti fuga sed amet facere culpa similique dolorum dolore! Distinctio perspiciatis sequi, atque doloribus enim, unde nesciunt vel et quaerat, labore veniam eum veritatis ratione officia velit delectus?</p>
+    </div>
+    <img src="{% static 'base/images/nurse-group-2.jpg' %}" alt="group of nurse" class="nurse-group-img">
+</div>
+<!-- end of nurse and care givers -->
+<!-- begining of laboratory -->
+<div class="departments-text-holder-1 col-sm container">
+    <div class="doctors-text">
+        <h3 style="text-align:center">Laboratory🔬</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum nobis expedita odit, nam reiciendis tempora totam aliquid rerum cumque voluptatibus velit facere perferendis fugiat at, ab doloremque non nulla? Perspiciatis, tempore vero! Doloremque eveniet facilis iusto ea esse perspiciatis in voluptatum eos facere, alias, aut minus repellendus totam odit distinctio vero natus voluptates. Iste in aperiam vero laborum dolores labore, repellat harum enim voluptatibus sit reprehenderit, a architecto ducimus corporis itaque nam corrupti fuga sed amet facere culpa similique dolorum dolore! Distinctio perspiciatis sequi, atque doloribus enim, unde nesciunt vel et quaerat, labore veniam eum veritatis ratione officia velit delectus?</p>
+    </div>
+    <img src="{% static 'base/images/lab-assistant.jpg' %}"  alt="group of doctors" class="doctors-group-img">
+</div>
+<!-- end of laboratory -->
+<!-- Begining of Pharmacy -->
+<div class="departments-text-holder-2 col-sm container">
+    <div class="nurse-text">
+        <h3 style="text-align:center">Pharmacy ⚕ </h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum nobis expedita odit, nam reiciendis tempora totam aliquid rerum cumque voluptatibus velit facere perferendis fugiat at, ab doloremque non nulla? Perspiciatis, tempore vero! Doloremque eveniet facilis iusto ea esse perspiciatis in voluptatum eos facere, alias, aut minus repellendus totam odit distinctio vero natus voluptates. Iste in aperiam vero laborum dolores labore, repellat harum enim voluptatibus sit reprehenderit, a architecto ducimus corporis itaque nam corrupti fuga sed amet facere culpa similique dolorum dolore! Distinctio perspiciatis sequi, atque doloribus enim, unde nesciunt vel et quaerat, labore veniam eum veritatis ratione officia velit delectus?</p>
+    </div>
+    <img src="{% static 'base/images/pharmacry.jpg' %}" alt="group of nurse" class="nurse-group-img">
+</div>
+<!-- end of pharmacy -->
+
 {% endblock content %}

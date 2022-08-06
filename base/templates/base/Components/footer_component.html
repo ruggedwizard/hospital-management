@@ -1,8 +1,11 @@
 {% load static %}
 {% block content %}
+<!-- new footer -->
 <div class="footer">
-    <div class="col-1">
-        <h5 class="first-text"><img class="medicine-logo" src="{%  static 'base/images/medicine-logo.png' %}" alt="medicine-logo">RE<span class="second-text-footer">MEDIC</span></h5>
+    <br>
+    <br>
+    <div class="footer-logo">
+        <h5 class="first-text-logo"><img class="medical-logo-navbar" src="{%  static 'base/images/medicine-logo.png' %}"" alt="medicine-logo">RE<span class="second-text-logo">MEDIC</span></h5>
     </div>
     <div class="menu-list">
         <ul>
@@ -14,5 +17,7 @@
             <li> <a href="{% url 'conatct_us_page' %}">Contact</a></li>
     </div>
     <!-- <p style="text-align: center; color: white;">&copy; remedic 2022</p> -->
-</div>
+  </div>
+  
+<!-- end of footer -->
 {% endblock content %}

@@ -1,0 +1,255 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+/* Navigation */
+.menu{
+    margin-left: 4em;
+    text-align: justify;
+    font-size: larger;
+}
+.menu:hover{
+    color:lightseagreen
+}
+
+.first-text-logo{
+    color: lightseagreen;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+}
+.second-text-logo{
+    /* color: lightseagreen; */
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.medical-logo-navbar{
+    width: 30px;
+    margin-left: 2em;
+}
+/* end of navigation */
+/* Begining of main-content */
+.main-content{
+    background-color: lightseagreen;
+    height: 400px;
+    opacity: 0.8;
+    /* color: white; */
+    padding: auto;
+    /* margin-top: -12em; */
+}
+.text-value-big{
+    /* width: 300px; */
+    text-align: center;
+    font-size: 45px;
+    margin-top: 4em;
+    color: white;
+}
+
+.text-holder{
+    text-align: center;
+    margin-top: -600px;
+    margin-bottom: 100px;
+    height: 600px;
+    color: white;
+    background-color: lightseagreen;
+    overflow: hidden;
+
+}
+.image-background{
+    width:100%;
+    overflow: hidden;
+    height: 50%;
+    opacity: 0.9;
+    height: 600px;
+}
+
+/* end of main content */
+
+/* beginging of footer */
+.footer{
+    margin-top: 220px;
+    background-color: black;
+    height: 280px;
+    color: white;
+}
+li{
+    /* display: none; */
+    list-style: none;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: lightseagreen;
+}
+
+
+.menu-list{
+    text-align: right;
+    margin-right: 5em;
+}
+
+.contact-us-form{
+    border: 1px solid lightseagreen;
+    padding: 2em;
+    margin-top: 250px;
+    width: 500px;
+    margin-left:auto
+}
+
+li:hover{
+    color: lightseagreen;
+}
+
+.single-doctor{
+    width: 300px;
+}
+.card-text{
+    width: 700px;
+    margin-left: 20em;
+    margin-top: -15em;
+}
+
+.main-content-holder{
+    margin-bottom: 2em;
+}
+/* contact us page */
+.contact-us-sick-img{
+    width: 300px;
+}
+.illness-text{
+    text-align: justify;
+    margin-left: 300px;
+    width: 850px;
+    margin-top: -18em;
+}
+.leave-a-message-dialog{
+    width: 500px;
+    border: 1px solid lightseagreen;
+    padding: 2em;
+    margin-left: 30em;
+}
+/* end conatct us page */
+.blog-text-holder{
+    border: 1px solid lightseagreen;
+    margin: 1em;
+    padding: 1em;
+}
+.doctors-text{
+    text-align: justify;
+    width: 800px;
+}
+.doctors-group-img{
+    margin-left: 800px;
+    margin-top: -15em;
+    width: 300px;
+}
+.departments-text-holder-1{
+    border: 1px solid lightseagreen;
+    height: auto;
+    padding: 2em;
+    margin-top: 1em;
+}
+.departments-text-holder-2{
+    border: 1px solid lightseagreen;
+    height: auto;
+    padding: 2em;
+    margin-top: 1em;
+}
+.nurse-text{
+    width: 800px;
+    text-align: justify;
+    margin-left: 300px;
+    padding: 2em;
+}
+.nurse-group-img{
+    margin-top: -18em;
+    width: 300px;
+    height: 250px;
+
+}
+
+
+/* blog page  */
+
+/* end of blog page */
+/* modbile screen */
+@media screen and (max-width:1024px) {
+    .doctors-group-img{
+        display: none;
+        margin: 0;
+    }
+    .nurse-group-img{
+        display: none;
+        margin: 0;
+    }
+    .nurse-text{
+        width: auto;
+        margin: 0;
+        padding: 0em;
+    } 
+    .navigation-control{
+        width: 100px;
+    }
+    .card-text{
+        width: auto;
+    }
+}
+
+/* end of footer */
+
+/* tablet screen */
+@media screen and (max-width: 415px){
+    .menu-list{
+        margin-left: 200px;
+    }
+    .doctors-group-img{
+        display: none;
+    }
+    
+    .contact-us-form{
+        margin-left: 0em;
+        width: auto;
+    }
+    .leave-a-message-dialog{
+        width: 310px;
+        border: 1px solid lightseagreen;
+        display: none;
+    }
+    .contact-us-sick-img{
+        display: none;
+    }
+    .illness-text{
+        text-align: justify;
+        margin: auto;
+        padding: 1em;
+        width: 340px;
+    }
+    .blog-text-holder{
+        border: 1px solid lightseagreen;
+        padding: 1em;
+        width: 300px;
+        margin: auto;
+        margin-top: 1em;
+    }
+    .doctors-text{
+        width: auto;
+    }
+    .nurse-text{
+        width: auto;
+        margin: 0;
+        padding: 0em;
+    }
+    .single-doctor{
+        display: none;
+    }
+    .card-text{
+        width: auto;
+        margin: 0em;
+        padding: 1em;
+    }
+}
+
+/* end */

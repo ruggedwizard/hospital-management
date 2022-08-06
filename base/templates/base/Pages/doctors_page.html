@@ -1,38 +1,31 @@
 {% extends 'base/index.html' %}
 {% load static %}
 {% block content %}
-<div>
-    <h5 style="text-align:center">Meet Our Physicians👩🏻‍⚕️</h5>
-    <!-- Doctors Profile Card -->
-    <div class="row">
-    <!-- Another Doctor Card -->
-        <div class="card col">
-        <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator doctors-logo" src="{% static 'base/images/doctors-icon.png' %}">
-        </div>
-        <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-            <p><a href="#">This is a link</a></p>
-        </div>
-        <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-            <p>Here is some more information about this product that is only revealed once clicked on.</p>
-        </div>
-        </div>
-        <!-- End here -->
-        <div class="card col s6 m3">
-            <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator doctors-logo" src="{% static 'base/images/doctors-icon.png' %}">
-            </div>
-            <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                <p><a href="#">This is a link</a></p>
-            </div>
-            <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                <p>Here is some more information about this product that is only revealed once clicked on.</p>
-            </div>
-            </div>
+
+<!-- another -->
+<h3 style="text-align: center;">Meet our physicians 👨🏻‍⚕️</h3>
+<!-- card for a doctor -->
+<div class="main-content-holder">
+  <div class="card container col-sm">
+    <img src="{% static 'base/images/Young-Male-Doctor.png' %}" class="single-doctor" alt="a single doctor">
+    <div class="card-text">
+      <h4>Doctors Name</h4>
+      <p>Notable Achievements</p>
+      <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia tenetur ratione repellendus molestias! Consequatur consequuntur cum autem quis laborum numquam explicabo blanditiis praesentium laboriosam accusamus rem tenetur, odio optio odit dignissimos ut, unde ab ullam enim beatae. Non molestias ratione maxime harum vel, magnam dolorum ut neque recusandae incidunt ad eligendi, obcaecati doloribus nisi beatae impedit commodi consequatur dicta unde, fugit assumenda deleniti quis ullam. Dolorum aperiam quis est laboriosam in tenetur beatae nisi recusandae ipsum autem. Aliquam, hic in?</p>
+    </div>
+  </div>
 </div>
-</div>
+<!-- end of card -->
+
+<!-- Another Card  -->
+<div class="">
+  <div class="card container col-sm">
+    <img src="{% static 'base/images/Young-Male-Doctor.png' %}" class="single-doctor" alt="a single doctor">
+    <div class="card-text">
+      <h4>Doctors Name</h4>
+      <p>Notable Achievements</p>
+      <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia tenetur ratione repellendus molestias! Consequatur consequuntur cum autem quis laborum numquam explicabo blanditiis praesentium laboriosam accusamus rem tenetur, odio optio odit dignissimos ut, unde ab ullam enim beatae. Non molestias ratione maxime harum vel, magnam dolorum ut neque recusandae incidunt ad eligendi, obcaecati doloribus nisi beatae impedit commodi consequatur dicta unde, fugit assumenda deleniti quis ullam. Dolorum aperiam quis est laboriosam in tenetur beatae nisi recusandae ipsum autem. Aliquam, hic in?</p>
+    </div>
+  </div>
+
 {% endblock content %}

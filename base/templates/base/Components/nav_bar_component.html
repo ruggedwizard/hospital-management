@@ -1,19 +1,27 @@
 {% load static %}
 {% block content %}
-<div class="row navigation">
-    <div class="col-1">
-        <h5 class="first-text"><img class="medicine-logo" src="{%  static 'base/images/medicine-logo.png' %}" alt="medicine-logo">RE<span class="second-text">MEDIC</span></h5>
+<!-- Navbar new -->
+<nav class="navbar navbar-expand-md" id="navigation-contorl">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="{%  static 'base/images/medicine-logo.png' %}" class="medical-logo-navbar" alt="medical-logo"> <span class="first-text-logo">RE</span><span class="second-text-logo">MEDIC</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse navigation-contorl" id="navbarNavAltMarkup">
+        <div class="navbar-nav ">
+          <a class="nav-link menu" aria-current="page" href="#">Home</a>
+          <a class="nav-link menu" href="#">About</a>
+          <a class="nav-link menu" href="#">Department</a>
+          <a class="nav-link menu" href="#">Doctors</a>
+          <a class="nav-link menu" href="#">Blog</a>
+          <a class="nav-link menu" href="#">Contact</a>
+
+        </div>
+      </div>
     </div>
-    <div class="col-6">
-        <ul class="navbar">
-            <li class="menu"> <a href="/">Home</a></li>
-            <li class="menu"> <a href="{% url 'about_page' %}">About</a></li>
-            <li class="menu"> <a href="{% url 'department_page' %}">Departments</a></li>
-            <li class="menu"> <a href="{% url 'doctor_page' %}">Doctors</a></li>
-            <li class="menu"> <a href="{% url 'blog_page' %}">Blog</a></li>
-            <li class="menu last-menu"> <a href="{% url 'conatct_us_page' %}">Contact</a></li>
-            <li class="btn"> <a href="" class="btn-text">Make an Appointment</a></li>
-        </ul>
-    </div>
-</div>
+  </nav>
+<!-- navbar end -->
+
+
+
 {% endblock content %}
