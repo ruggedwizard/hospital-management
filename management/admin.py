@@ -1,5 +1,5 @@
 from django.contrib import admin
-from management.models import Birth_report, Department,Doctor, Donors, Medicine, Nurse, Other_Staff,Patient,Room,Alloted_Beds,Appointment,Leave_message
+from management.models import Birth_report, Department,Doctor, Donors, Medicine, Nurse, Other_Staff,Patient,Room,Alloted_Beds,Appointment,Leave_message,Blog
 
 # Register your models here.
 admin.site.register(Department)
@@ -14,4 +14,5 @@ admin.site.register(Donors)
 admin.site.register(Birth_report)
 admin.site.register(Appointment)
 admin.site.register(Leave_message)
+admin.site.register(Blog)
 

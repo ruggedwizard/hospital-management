@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from management.models import Doctor,Appointment,Leave_message
+from management.models import Doctor,Appointment,Leave_message, Blog
 from .forms import MakeAppointment
 from .emails import send_email
 
@@ -13,10 +13,9 @@ def landing_page(request):
         email = request.POST['email']
         phone_number = request.POST['phone_number']
         reason_for_appointment = request.POST['reason-for-appointment']
-        date_of_appointment = request.POST['date-of-appointment']
         _appointment = Appointment.objects.create(Fullname=fullname,Contact_email=email,Contact_phone=phone_number,Reason_for_Appointment=reason_for_appointment)
         """SENDING USER EMAIL USING SMTPLIB PYTHON"""
-        
+        send_email(email)
         """USING FORMS MODEL BUT INPUT CUSTOMIZATION FAILED"""
         # forms= MakeAppointment(request.POST)
         # if forms.is_valid():
@@ -57,7 +56,13 @@ def contact_us_page(request):
         message_for_doctor = request.POST['message']
         print(request.POST)
         Leave_message.objects.create(email=email,message_for_doctor=message_for_doctor)
+        """SEND EMAILS TO USER EMAIL"""
+        send_email(email)
     return render(request,'base/Pages/contact_page.html')
 
 def blog_page(request):
-    return render(request,'base/Pages/blog_page.html')
+    blogs = Blog.objects.all()
+    context = {
+        'blogs':blogs
+    }
+    return render(request,'base/Pages/blog_page.html',context)

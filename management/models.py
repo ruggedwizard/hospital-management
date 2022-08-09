@@ -1,4 +1,5 @@
 from email.policy import default
+from tkinter.tix import Tree
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import User
@@ -135,6 +136,16 @@ class Other_Staff(models.Model):
     def __str__(self):
         return self.Other_firstname + " " + self.Other_lastname + " " +self.Other_role
 
+
+class Blog(models.Model):
+    blog_title = models.CharField(max_length=200)
+    doctors_name = models.ForeignKey(Doctor,null=True,blank=True, on_delete=models.CASCADE)
+    body_of_blog = models.TextField(max_length=200000)
+    data_added = models.DateTimeField(auto_now_add=True)
+
+
+    def __str__(self):
+        return self.blog_title
 
 class Medicine(models.Model):
     name = models.CharField(max_length=250)

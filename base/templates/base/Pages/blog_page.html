@@ -3,12 +3,15 @@
 {% block content %}
 <div class="row">
     <b style="text-align: center;">Some Health Tips That Will help us Keep fit 💪🏻</b>
+    {% for blog in blogs %}
     <div class="col-sm blog-text-holder">
-        <b>Blog Title</b>
+        <b>{{blog.blog_title}}</b>
         <pre class="doctors-name">by: Dr. Lorem, ipsum dolor.</pre>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur veritatis ab neque, eos fugiat sint tempora sunt sapiente labore et excepturi esse iure est. Voluptatibus sequi tenetur, corrupti nobis, magni ex deleniti blanditiis repellendus ut odio quaerat sit distinctio qui ducimus tempora, dicta dignissimos? Cupiditate, placeat repellendus? Fugiat, consectetur nulla.</p>
+        <pre class="doctors-name" style="margin-top: -1em;">{{blog.data_added}}</pre>
+        <p>{{blog.body_of_blog|truncatewords:"80"}}</p>
         <button class="btn btn-outline-success">Continue Reading</button>
     </div>
+    {% endfor %}
 
     <div class="col-sm blog-text-holder">
         <b>Blog Title</b>
