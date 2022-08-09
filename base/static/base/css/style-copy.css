@@ -31,7 +31,7 @@
 /* Begining of main-content */
 .main-content{
     background-color: lightseagreen;
-    height: 400px;
+    /* height: 400px; */
     opacity: 0.8;
     /* color: white; */
     padding: auto;
