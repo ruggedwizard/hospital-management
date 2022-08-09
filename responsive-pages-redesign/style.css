@@ -12,7 +12,10 @@
 .menu:hover{
     color:lightseagreen
 }
-
+/* 
+input[type="text"]{
+    width: 200px;
+} */
 .first-text-logo{
     color: lightseagreen;
     font-family: Verdana, Geneva, Tahoma, sans-serif;

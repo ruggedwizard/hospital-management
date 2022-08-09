@@ -9,12 +9,12 @@
       </button>
       <div class="collapse navbar-collapse navigation-contorl" id="navbarNavAltMarkup">
         <div class="navbar-nav ">
-          <a class="nav-link menu" aria-current="page" href="#">Home</a>
-          <a class="nav-link menu" href="#">About</a>
-          <a class="nav-link menu" href="#">Department</a>
-          <a class="nav-link menu" href="#">Doctors</a>
-          <a class="nav-link menu" href="#">Blog</a>
-          <a class="nav-link menu" href="#">Contact</a>
+          <a class="nav-link menu" aria-current="page" href="/">Home</a>
+          <a class="nav-link menu" href="{% url 'about_page' %}">About</a>
+          <a class="nav-link menu" href="{% url 'department_page' %}">Department</a>
+          <a class="nav-link menu" href="{% url 'doctor_page' %}">Doctors</a>
+          <a class="nav-link menu" href="{% url 'blog_page' %}">Blog</a>
+          <a class="nav-link menu" href="{% url 'conatct_us_page' %}">Contact</a>
 
         </div>
       </div>

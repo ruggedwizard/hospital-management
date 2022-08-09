@@ -170,7 +170,12 @@ li:hover{
     height: 250px;
 
 }
-
+.left-sick-image{
+    height: 400px;
+    margin-top: -30em;
+    margin-left: 1100px;
+    margin-bottom: -20em;
+}
 
 /* blog page  */
 
@@ -195,6 +200,9 @@ li:hover{
     }
     .card-text{
         width: auto;
+    }
+    .left-sick-image{
+        display: none;
     }
 }
 
@@ -253,3 +261,7 @@ li:hover{
 }
 
 /* end */
+
+/* input[type="text"]{
+    width: 200px;
+} */

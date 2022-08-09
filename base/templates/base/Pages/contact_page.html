@@ -52,7 +52,6 @@
         </form>
     </div>
     end of contact-the-doctor
-    <img src="{% static 'base/images/doctor-long.jpeg' %}" alt="a sick boy" class="left-sick-image">
 </div> -->
 
 <h3 style="text-align: center;">Having Health Issues?</h3>
@@ -92,22 +91,23 @@
 </div>
 <!-- Send a message to doctor -->
 <div>
-    <form class="leave-a-message-dialog">
+    <form class="leave-a-message-dialog" method="post">
+        {% csrf_token %}
         <h3 style="text-align: center;">Leave a message for the doctor</h3>
-       
-       <div class="mb-3">
-         <label for="exampleInputEmail1" class="form-label">Email address:</label>
-         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-         
-       </div>
-       
-       <div class="mb-3">
-         <label for="exampleInputEmail1" class="form-label">Message for the Doctor:</label>
-         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-       </div>
-       <button type="submit" class="btn btn-primary">Submit</button>
-     </form>
-     
+        
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address:</label>
+            <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+            
+        </div>
+        
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Message for the Doctor:</label>
+            <input type="text" class="form-control" name="message" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <img src="{% static 'base/images/doctor-long.jpeg' %}" alt="a sick boy" class="left-sick-image">
 </div>
 
 {% endblock content %}

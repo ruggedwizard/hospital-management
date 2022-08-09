@@ -77,13 +77,13 @@ class Appointment(models.Model):
     Fullname = models.CharField(max_length=250)
     Contact_email = models.EmailField(max_length=500, default="notprovided@example.com", null=True, blank=True)
     Contact_phone = models.CharField(max_length=250)
-    Appointment_date = models.DateTimeField()
+    # Appointment_date = models.DateTimeField()
     Assigned_doctor = models.ForeignKey(Doctor,on_delete=models.CASCADE, null=True,blank=True)
     Reason_for_Appointment = models.TextField(max_length=2500)
     Appointment_completed = models.BooleanField(default=False, null=True, blank=True)
 
-    class Meta:
-        ordering = ["Appointment_date"]
+    # class Meta:
+        # ordering = ["Appointment_date"]
 
     def __str__(self):
         return self.Fullname + " Appointment"
@@ -184,3 +184,10 @@ class Birth_report(models.Model):
     def __str__(self):
         return self.patient.Patient_lastname + self.patient.Patient_firstname + " Birth Report"
 
+class Leave_message(models.Model):
+    email = models.EmailField(default="nullprovided@gmail.com",null=False,blank=False)
+    message_for_doctor= models.CharField(max_length=5000)
+    date_of_complaint = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.email + "Complaints Placed"
