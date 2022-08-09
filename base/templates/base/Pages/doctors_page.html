@@ -5,6 +5,7 @@
 <!-- another -->
 <h3 style="text-align: center;">Meet our physicians 👨🏻‍⚕️</h3>
 <!-- card for a doctor -->
+{% for doctor in doctors %}
 <div class="main-content-holder">
   <div class="card container col-sm">
     <img src="{% static 'base/images/Young-Male-Doctor.png' %}" class="single-doctor" alt="a single doctor">
@@ -16,7 +17,7 @@
   </div>
 </div>
 <!-- end of card -->
-
+{% endfor %}
 <!-- Another Card  -->
 <div class="">
   <div class="card container col-sm">
