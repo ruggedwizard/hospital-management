@@ -4,6 +4,7 @@ from .forms import MakeAppointment
 from .emails import send_email
 
 
+
 # Create your views here.
 def landing_page(request):
     forms = MakeAppointment()

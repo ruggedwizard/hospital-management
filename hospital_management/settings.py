@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import dotenv_values
+config = dotenv_values('.env')
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-l44#3(nm2m+byhvl@%aert3xwakx*a^ian#jf$n^%jzzpee67#'
+SECRET_KEY = config['APP_SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -82,6 +84,16 @@ DATABASES = {
     }
 }
 
+DATABASES = {
+    'default':{
+        'ENGINE':config['DB_ENGINE'],
+        'NAME':config['DB_NAME'],
+        'USER':config['DB_USERNAME'],
+        'PASSWORD':config['DB_PASSWORD'],
+        'HOST':config['DB_HOST'],
+        'PORT':config['DB_PORT']
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -121,6 +133,8 @@ STATIC_URL = 'static/'
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'static/images')
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles_build','static')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
