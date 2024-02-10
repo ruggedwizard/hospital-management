@@ -6,4 +6,6 @@ psycopg2-binary==2.9.7
 python-dotenv==1.0.1
 pytz==2024.1
 sqlparse==0.4.2
+torchvision==0.17.0
 tzdata==2022.1
+
