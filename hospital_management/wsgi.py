@@ -16,3 +16,4 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'hospital_management.settings')
 app = get_wsgi_application()
 
 application  = app
+
